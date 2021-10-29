@@ -1,44 +1,45 @@
 <?php
-// require_once("assets/includes/db_con.php");
-// session_start();
-// $pass_error="";
-// $login_id="";
-// if (isset($_POST['submit'])){
-//   $login_id=$_POST['login_id'];
-//   $password=md5($_POST['password']);
-//   $query="SELECT * FROM users WHERE login_id='$login_id' AND password='$password'";
-//   $result=mysqli_query($con,$query) or die(mysqli_error($con));
-//   $count=mysqli_num_rows($result);
-//   if($count == 1){
-//     while ($row=mysqli_fetch_assoc($result)){
-//       $user_id=$row['user_id'];
-//       $user_type=$row['user_status'];
-//       $_SESSION['user_id']="$user_id";
-//       $_SESSION['user_type']="$user_type";
-//    if ($user_type == 1) {
-//     header("location:admin/dashboard.php");$pass_error='<script>swal("Access Denied!", "You clicked the button to try again!", "error")</script>';
-//     }elseif($user_type == 2) {
-//     header("location:ulama/index.html");$pass_error='<script>swal("Access Denied!", "You clicked the button to try again!", "error")</script>';
-//     }elseif($user_type == 3){
-//        $pass_error=' <script>
-// swal({
-//   title: "Success!",
-//   text: "Good",
-//   type: "success",
-//   timer: 2000,
-//   showConfirmButton: false
-// }, function(){
-//       window.location.href = "dashboard.php";
-// });
-// </script>';
-//     }else{
-//         $pass_error='<script>swal("Access Denied!", "You clicked the button to try again!", "error")</script>';
-//     }
-// }
-// }else{
-//     $pass_error='<script>swal("Invalid!", "please input valid username/password!", "error")</script>';
-// }
-// }
+require_once("./assets/includes/db_con.php");
+require_once("./assets/includes/config.php");
+session_start();
+$pass_error="";
+$login_id="";
+if (isset($_POST['submit'])){
+  $login_id=$_POST['email'];
+  $password=md5($_POST['password']);
+  $query="SELECT * FROM users WHERE email='$login_id' AND password='$password'";
+  $result=mysqli_query($con,$query) or die(mysqli_error($con));
+  $count=mysqli_num_rows($result);
+  if($count == 1){
+    while ($row=mysqli_fetch_assoc($result)){
+      $user_id=$row['id'];
+      $user_type=$row['status'];
+      $_SESSION['user_id']="$user_id";
+      $_SESSION['user_type']="$user_type";
+   if ($user_type == 1) {
+    header("location:admin/dashboard.php");$pass_error='<script>swal("Access Denied!", "You clicked the button to try again!", "error")</script>';
+    }elseif($user_type == 2) {
+    header("location:ulama/index.html");$pass_error='<script>swal("Access Denied!", "You clicked the button to try again!", "error")</script>';
+    }elseif($user_type == 3){
+       $pass_error=' <script>
+swal({
+  title: "Success!",
+  text: "Good",
+  type: "success",
+  timer: 2000,
+  showConfirmButton: false
+}, function(){
+      window.location.href = "dashboard.php";
+});
+</script>';
+    }else{
+        $pass_error='<script>swal("Access Denied!", "You clicked the button to try again!", "error")</script>';
+    }
+}
+}else{
+    $pass_error='<script>swal("Invalid!", "please input valid username/password!", "error")</script>';
+}
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -161,10 +162,10 @@ button{
 
         <!-- Registeration Form -->
         <div class="col-md-7 col-lg-6 ml-auto">
-            <form action="#">
+            <form action="login.php" method="post">
                 <div class="row">
 
-
+                <?php echo $pass_error ?>
                     <!-- Email Address -->
                     <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
@@ -182,15 +183,13 @@ button{
                                 <i class="fa fa-lock text-muted"></i>
                             </span>
                         </div>
-                        <input id="lastName" type="text" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
+                        <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
                     </div>
 
 
                     <!-- Submit Button -->
-                    <button class="form-group col-lg-12 mx-auto mb-0">
-                        <a href="#" class="btn btn-primary btn-block py-2">
+                    <button name="submit" type="submit" class="form-group col-lg-12 mx-auto mb-0 btn btn-primary btn-block py-2">
                             <span class="font-weight-bold">Sign in</span>
-                        </a>
                     </button >
 
                     <!-- Divider Text -->

@@ -71,7 +71,6 @@ error:function (){}
      <?php include('topbar.php') ?>
                 <div class="container">
                     <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
   <!--Controls-->
   <div class="controls-top">
     <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
@@ -80,11 +79,7 @@ error:function (){}
   <!--/.Controls-->
 
   <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-    
-  </ol>
+
   <!--/.Indicators-->
 
   <!--Slides-->
@@ -185,7 +180,7 @@ error:function (){}
             <h4 class="card-title">Card title</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-success text-white">Button</a>
           </div>
         </div>
       </div>
