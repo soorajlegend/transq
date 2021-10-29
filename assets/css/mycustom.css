@@ -1,0 +1,128 @@
+.nav{
+	padding: 10px 50px;
+	background-color: #fff;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	top: 0;
+}
+.logo{
+	width: 120px;
+	transition: .5s;
+}
+.logo:hover{
+	transform: scale(1.3);
+}
+.footer-logo{
+	width: 120px;
+	margin-top: 60px;
+	margin-left: 60px;
+	transition: .5s;
+}
+.footer-logo:hover{
+	transform: scale(1.3);
+}
+.nav-menu{
+	display: flex;
+	padding: 0px;
+	background: transparent;
+	margin-left: 50%;
+
+}
+.nav-menu li{
+	padding: 7px 10px;
+	list-style: none;	
+	word-spacing: 2px;
+	margin-left: 20px;
+	margin-top: 10px;
+	font-weight: 400;
+	cursor: pointer;
+	color:  #3399ff;
+	transform: .5s;
+}
+.nav-menu li:hover{
+	transform: scale(1.0);
+	background-color: #3399ff;
+	color: #fff;
+	 border-radius: 4px;
+}
+.my-header{
+	position: relative;
+	top: 50px;
+	padding: 30px 50px;
+}
+.header-img{
+	position: absolute;
+	width: 70%;
+	right: 0;
+	top: 0px;
+	z-index: 2;
+}
+.header-card img{
+	width: 50px;
+}
+.header-content h1{
+	width: 50%;
+	position: relative;
+	z-index: 3;
+	margin-top: 100px;
+	padding-left: 20px;
+	color: #3399ff;
+	font-size: 20pt;
+	word-wrap: break-word;
+	letter-spacing: 0.2px;
+	word-wrap: 3px;
+	font-weight: 700;
+	transition: .5s;
+}
+.header-content h1:hover{
+	transform: scale3d(1.2, 1.1, 1.5);
+}
+.header-content span{
+	color: #3399ff;
+	margin-left: 20px;
+	font-size: 15pt;
+	letter-spacing: 0.2px;
+	font-weight: 700;
+}
+.header-content .header-card{
+	padding: 20px 10px;
+	border-radius: 4px;
+	transition: .5s;
+	box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5), 5px 5px 15px rgba(70, 70, 70, 0.2);
+}
+.header-content .header-card:hover{
+	transform: scale(1.1);
+	box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5), 5px 5px 15px rgba(70, 70, 70, 0.2);
+}
+.section{
+	position: relative;
+}
+.section .section-img{
+	width:50%;
+	position: relative;
+	display: flex;
+}
+.section .section-content{
+	width: 100%;
+	position: absolute;
+	display: flex;
+	word-wrap: break-word;
+	right: 100px;
+	top:200px;
+}
+.section .section-content2{
+	width: 100%;
+	position: absolute;
+	display: flex;
+	word-wrap: break-word;
+	left: 100px;
+	top:200px;
+}
+	.footer{
+	
+}
+.footer-content{
+	display: block;
+	pos
+}
