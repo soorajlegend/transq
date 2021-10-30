@@ -7,7 +7,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
 } elseif ($_SESSION['user_type'] != 1) {
     header("location:logout.php");
 } else {
-    ?>
+?>
 <!DOCTYPE html>
 <html>
 
@@ -50,21 +50,25 @@ if (strlen($_SESSION['user_id'] == 0)) {
 <i class="fa fa-play label-arrow"></i-->
 <!--Action button  -->
 </div>
-                
-                    
-                               <?php
-// $sql = "SELECT users.name, questions.date_ask, questions.question, questions.status, questions.q_id FROM questions INNER JOIN users ON questions.user_id = users.user_id WHERE questions.status='0'  ORDER BY questions.q_id DESC";
-// $query = $dbh -> prepare($sql);
-// $query->execute();
-// $results=$query->fetchAll(PDO::FETCH_OBJ);
-// if($query->rowCount() > 0)
-// {
-// foreach($results as $result)
-// {               ?>  
+ 
  <div class="container-fluid">
                         <div class="row"> 
                             <div class="col-md-12">
                             <div class="form-group"><a href="NewApp.php" class="btn btn-primary"><i class="fa fa-plus"> </i>&nbsp;Add Aplication</a></div></div>
+                             <?php 
+                             $org_id=$_SESSION['user_id'];
+            $sql="SELECT * FROM applications WHERE org_id='$org_id' ORDER BY id DESC";
+  $query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{  
+      // $sdate=date("M d, Y h:i A",strtotime($result->starting_date);
+      // $edate=date("M d, Y h:i A",strtotime($result->closing_date);
+      // $diff = $sdate->diff($edate)->format("%a");
+       ?>
     <div class="col-xl-4 col-md-6 mb-4">
         <div class="card border-left-primary shadow h-100 py-2">
             <div class="card-body">
@@ -74,86 +78,26 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="name"><h3><b>Application</b></h3></div>
             <hr>
             
-            <div class="text">Application Title: <?php //echo htmlentities($result->question);?></div>
+            <div class="text">Application Title: <?php echo htmlentities($result->title);?></div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
-             <div class="text">Remaining Time: <?php //echo htmlentities($result->question);?></div>
+             <div class="text">Starting Date: <?php echo htmlentities($result->starting_date);?></div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">View Datails</button>
+            <div class="text">Closing Date: <?php echo htmlentities($result->closing_date);?></div>
+            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
+            <hr>
+                <a href="Setcriterias.php?form=<?php echo $result->id ?>" class="btn btn-primary">Set Criterias</a>
             
             </form>
-                  
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        </div>
-                                       
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Application</b></h3></div>
-            <hr>
-            
-            <div class="text">Application Title: <?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-             <div class="text">Remaining Time: <?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">View Datails</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Application</b></h3></div>
-            <hr>
-            
-            <div class="text">Application Title: <?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-             <div class="text">Remaining Time: <?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">View Datails</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <?php }} ?>
 
 
-
-<?php //}} ?> 
-    
 
 
                <!---- <div class="row justify-content-center">
@@ -231,6 +175,5 @@ if (strlen($_SESSION['user_id'] == 0)) {
     </footer>-->
    <?php include 'footer.php'; ?>
 </body>
-
-</html>
 <?php } ?>
+</html>

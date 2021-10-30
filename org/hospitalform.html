@@ -1,0 +1,1331 @@
+<script src="https://cdn03.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/static/jotform.forms.js?3.3.28713" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = false;
+	JotForm.extendsNewTheme = false;
+	JotForm.newPaymentUIForNewCreatedForms = false;
+	JotForm.highlightInputs = false;
+
+   JotForm.setConditions([{"action":[{"field":"17","visibility":"Show"}],"link":"Any","terms":[{"field":"9","operator":"equals","value":"Female"}],"type":"field"},{"action":[{"field":"19","visibility":"Show"}],"link":"Any","terms":[{"field":"9","operator":"equals","value":"Female"}],"type":"field"},{"action":[{"field":"20","visibility":"Show"}],"link":"Any","terms":[{"field":"9","operator":"equals","value":"Female"}],"type":"field"},{"action":[{"field":"18","visibility":"Show"}],"link":"Any","terms":[{"field":"9","operator":"equals","value":"Female"}],"type":"field"},{"action":[{"field":"21","visibility":"Show"}],"link":"Any","terms":[{"field":"9","operator":"equals","value":"Female"}],"type":"field"}]);
+	JotForm.init(function(){
+	/*INIT-START*/
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("17", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("17", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); });
+ JotForm.formatDate({date:(new Date()), dateField:$("id_"+17)});
+ JotForm.displayLocalTime("hour_17", "min_17", "ampm_17", null, false);
+if (window.JotForm && JotForm.accessible) $('input_22').setAttribute('tabindex',0);
+    $('input_38').slider({width:'400', maxValue: '10', value: '5'});
+if (window.JotForm && JotForm.accessible) $('input_25').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_33').setAttribute('tabindex',0);
+      JotForm.description('input_33', '*Electronic Signature - This serves as your electronic signature. By entering your name you acknowledge receipt and agreement of the terms as  described above.');
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("29", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("29", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); });
+ JotForm.formatDate({date:(new Date()), dateField:$("id_"+29)});
+ JotForm.displayLocalTime("hour_29", "min_29", "ampm_29", null, false);
+if (window.JotForm && JotForm.accessible) $('input_27').setAttribute('tabindex',0);
+      JotForm.description('input_27', '*Electronic Signature - This serves as your electronic signature. By entering your name you acknowledge receipt and agreement of the terms as  described above.');
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("34", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("34", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); });
+ JotForm.formatDate({date:(new Date()), dateField:$("id_"+34)});
+ JotForm.displayLocalTime("hour_34", "min_34", "ampm_34", null, false);
+if (window.JotForm && JotForm.accessible) $('input_36').setAttribute('tabindex',0);
+      JotForm.alterTexts({"alphabetic":"This field can only contain letters","alphanumeric":"This field can only contain letters and numbers.","confirmClearForm":"Are you sure you want to clear the form","confirmEmail":"E-mail does not match","email":"Enter a valid e-mail address","incompleteFields":"There are incomplete required fields. Please complete them.","lessThan":"Your score should be less than","numeric":"This field can only contain numeric values","pleaseWait":"Please wait...","required":"This field is required.","uploadExtensions":"You can only upload following files:","uploadFilesize":"File size cannot be bigger than:"});
+	/*INIT-END*/
+	});
+
+   JotForm.prepareCalculationsOnTheFly([null,{"name":"clickTo","qid":"1","text":"Medical History","type":"control_head"},null,{"name":"fullName3","qid":"3","text":"Full Name","type":"control_fullname"},null,{"name":"checkThe5","qid":"5","text":"Check the conditions that apply to you or to any members of your immediate relatives:","type":"control_checkbox"},{"name":"checkThe6","qid":"6","text":"Check the symptoms that you have experienced in the PAST 6 WEEKS","type":"control_checkbox"},{"name":"areYou","qid":"7","text":"Are you currently taking any medication?","type":"control_radio"},{"name":"doYou","qid":"8","text":"Do you have any medication allergies?","type":"control_radio"},{"name":"whatIs","qid":"9","text":"What is your Gender?","type":"control_radio"},{"name":"doYou10","qid":"10","text":"Do you use or do you have history of using tobacco?","type":"control_dropdown"},{"name":"doYou11","qid":"11","text":"Do you use or do you have history of using illegal drugs?","type":"control_dropdown"},{"name":"howOften","qid":"12","text":"How often do you consume alcohol?","type":"control_radio"},{"name":"email13","qid":"13","text":"Email","type":"control_hidden"},null,null,null,{"name":"dateOf","qid":"17","text":"Date of last menstrual period","type":"control_datetime"},{"name":"areYou18","qid":"18","text":"Are you taking any hormones or birth control?","type":"control_radio"},{"name":"numberOf19","qid":"19","text":"Number of pregnancies","type":"control_number"},{"name":"numberOf","qid":"20","text":"Number of live births","type":"control_number"},{"name":"doYou21","qid":"21","text":"Do you have irregular or painful periods?","type":"control_radio"},{"name":"ifSo","qid":"22","text":"If so, please list:","type":"control_textarea"},{"name":"pageBreak","qid":"23","text":"Page Break","type":"control_pagebreak"},{"name":"clickTo24","qid":"24","text":"Certain Waivers under HIPAA.\n(a)\tPatient acknowledges that neither Group nor Physician guarantees that communications with Physician using electronic mail (\"e-mail\"), facsimile, video chat, instant messaging, and cellular telephone are secure or confidential methods of communications. Accordingly, Patient expressly waives Group’s and Physician’s obligations under the Health Insurance Portability and Accountability Act of 1996 (42 U.S.C. § 1320d et seq.), as amended by the Health Information Technology for Economic and Clinical Health Act of 2009, and all rules and regulations promulgated thereunder (collectively, \"HIPAA\"), and other state and federal laws and regulations applicable to the use, maintenance, and disclosure of patient-related information, to guarantee confidentiality with respect to correspondence using such means of communication. Patient acknowledges that all such communications may become a part of Patient’s medical records maintained by Physician.\n(b)\tBy providing Patient’s e-mail address to Physician, Patient authorizes Physician to communicate with Patient by e-mail regarding Patient’s \"protected health information\" (\"PHI\") (as defined under HIPAA) and Patient understands and agrees to the following:\nE-mail is not necessarily a secure medium for sending or receiving PHI and, accordingly, any third party may gain access to such PHI;\nAlthough Group and Physician will make all reasonable efforts to keep e-mail communications confidential and secure, neither Group nor Physician can assure or guarantee the absolute confidentiality of such e-mail communications.\n","type":"control_text"},{"name":"patientInitials","qid":"25","text":"Patient Initials:","type":"control_textbox"},{"name":"clickTo26","qid":"26","text":"Patient acknowledges and agrees that Physician and Group, along with their assigns, will be entitled to use any data, discoveries, results, improvements or other information resulting from the Services for any lawful purpose whatsoever, including, but not limited to, internal research, academic or other publications or commercial purposes.   All data will be kept on a Cloud Based system that is password protected, and accessible to MD Revolution staff.","type":"control_text"},{"description":"*Electronic Signature - This serves as your electronic signature. By entering your name you acknowledge receipt and agreement of the terms as  described above.","name":"patientName","qid":"27","text":"Patient Name","type":"control_textbox"},{"name":"patientDate","qid":"28","text":"Patient Date of Birth","type":"control_birthdate"},{"name":"todaysDate","qid":"29","text":"Today's Date","type":"control_datetime"},{"name":"pageBreak30","qid":"30","text":"Page Break","type":"control_pagebreak"},{"name":"clickTo31","qid":"31","text":"give my express permission to MD Revolution and Dr. Samir B Damani, to obtain and access to all of my medical records.  I understand that my personal and medical information may be stored on a password protected secure cloud service.","type":"control_text"},{"name":"i32","qid":"32","text":"I,","type":"control_fullname"},{"description":"*Electronic Signature - This serves as your electronic signature. By entering your name you acknowledge receipt and agreement of the terms as  described above.","name":"patientName33","qid":"33","text":"Patient Name","type":"control_textbox"},{"name":"todaysDate34","qid":"34","text":"Today's Date","type":"control_datetime"},{"name":"patientDate35","qid":"35","text":"Patient Date of Birth","type":"control_birthdate"},{"name":"anyExceptions","qid":"36","text":"Any exceptions to medical record access:","type":"control_textarea"},{"name":"submit","qid":"37","text":"Submit","type":"control_button"},{"name":"howHealthy38","qid":"38","text":"How healthy do you feel in general?","type":"control_slider"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Medical History","type":"control_head"},null,{"name":"fullName3","qid":"3","text":"Full Name","type":"control_fullname"},null,{"name":"checkThe5","qid":"5","text":"Check the conditions that apply to you or to any members of your immediate relatives:","type":"control_checkbox"},{"name":"checkThe6","qid":"6","text":"Check the symptoms that you have experienced in the PAST 6 WEEKS","type":"control_checkbox"},{"name":"areYou","qid":"7","text":"Are you currently taking any medication?","type":"control_radio"},{"name":"doYou","qid":"8","text":"Do you have any medication allergies?","type":"control_radio"},{"name":"whatIs","qid":"9","text":"What is your Gender?","type":"control_radio"},{"name":"doYou10","qid":"10","text":"Do you use or do you have history of using tobacco?","type":"control_dropdown"},{"name":"doYou11","qid":"11","text":"Do you use or do you have history of using illegal drugs?","type":"control_dropdown"},{"name":"howOften","qid":"12","text":"How often do you consume alcohol?","type":"control_radio"},{"name":"email13","qid":"13","text":"Email","type":"control_hidden"},null,null,null,{"name":"dateOf","qid":"17","text":"Date of last menstrual period","type":"control_datetime"},{"name":"areYou18","qid":"18","text":"Are you taking any hormones or birth control?","type":"control_radio"},{"name":"numberOf19","qid":"19","text":"Number of pregnancies","type":"control_number"},{"name":"numberOf","qid":"20","text":"Number of live births","type":"control_number"},{"name":"doYou21","qid":"21","text":"Do you have irregular or painful periods?","type":"control_radio"},{"name":"ifSo","qid":"22","text":"If so, please list:","type":"control_textarea"},{"name":"pageBreak","qid":"23","text":"Page Break","type":"control_pagebreak"},{"name":"clickTo24","qid":"24","text":"Certain Waivers under HIPAA.\n(a)\tPatient acknowledges that neither Group nor Physician guarantees that communications with Physician using electronic mail (\"e-mail\"), facsimile, video chat, instant messaging, and cellular telephone are secure or confidential methods of communications. Accordingly, Patient expressly waives Group’s and Physician’s obligations under the Health Insurance Portability and Accountability Act of 1996 (42 U.S.C. § 1320d et seq.), as amended by the Health Information Technology for Economic and Clinical Health Act of 2009, and all rules and regulations promulgated thereunder (collectively, \"HIPAA\"), and other state and federal laws and regulations applicable to the use, maintenance, and disclosure of patient-related information, to guarantee confidentiality with respect to correspondence using such means of communication. Patient acknowledges that all such communications may become a part of Patient’s medical records maintained by Physician.\n(b)\tBy providing Patient’s e-mail address to Physician, Patient authorizes Physician to communicate with Patient by e-mail regarding Patient’s \"protected health information\" (\"PHI\") (as defined under HIPAA) and Patient understands and agrees to the following:\nE-mail is not necessarily a secure medium for sending or receiving PHI and, accordingly, any third party may gain access to such PHI;\nAlthough Group and Physician will make all reasonable efforts to keep e-mail communications confidential and secure, neither Group nor Physician can assure or guarantee the absolute confidentiality of such e-mail communications.\n","type":"control_text"},{"name":"patientInitials","qid":"25","text":"Patient Initials:","type":"control_textbox"},{"name":"clickTo26","qid":"26","text":"Patient acknowledges and agrees that Physician and Group, along with their assigns, will be entitled to use any data, discoveries, results, improvements or other information resulting from the Services for any lawful purpose whatsoever, including, but not limited to, internal research, academic or other publications or commercial purposes.   All data will be kept on a Cloud Based system that is password protected, and accessible to MD Revolution staff.","type":"control_text"},{"description":"*Electronic Signature - This serves as your electronic signature. By entering your name you acknowledge receipt and agreement of the terms as  described above.","name":"patientName","qid":"27","text":"Patient Name","type":"control_textbox"},{"name":"patientDate","qid":"28","text":"Patient Date of Birth","type":"control_birthdate"},{"name":"todaysDate","qid":"29","text":"Today's Date","type":"control_datetime"},{"name":"pageBreak30","qid":"30","text":"Page Break","type":"control_pagebreak"},{"name":"clickTo31","qid":"31","text":"give my express permission to MD Revolution and Dr. Samir B Damani, to obtain and access to all of my medical records.  I understand that my personal and medical information may be stored on a password protected secure cloud service.","type":"control_text"},{"name":"i32","qid":"32","text":"I,","type":"control_fullname"},{"description":"*Electronic Signature - This serves as your electronic signature. By entering your name you acknowledge receipt and agreement of the terms as  described above.","name":"patientName33","qid":"33","text":"Patient Name","type":"control_textbox"},{"name":"todaysDate34","qid":"34","text":"Today's Date","type":"control_datetime"},{"name":"patientDate35","qid":"35","text":"Patient Date of Birth","type":"control_birthdate"},{"name":"anyExceptions","qid":"36","text":"Any exceptions to medical record access:","type":"control_textarea"},{"name":"submit","qid":"37","text":"Submit","type":"control_button"},{"name":"howHealthy38","qid":"38","text":"How healthy do you feel in general?","type":"control_slider"}]);}, 20); 
+</script>
+<link href="https://cdn01.jotfor.ms/static/formCss.css?3.3.28713" rel="stylesheet" type="text/css" />
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/nova.css?3.3.28713" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/54be8eef700cc415378b456a.css?themeRevisionID=5cedbeaea0c8bc323340c421"/>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.28713" />
+<style type="text/css">
+    .form-label-left{
+        width:150px;
+    }
+    .form-line{
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    .form-label-right{
+        width:150px;
+    }
+    .form-all{
+        width:690px;
+        color:#555 !important;
+        font-family:'Lato';
+        font-size:18px;
+    }
+    .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+        color: Black;
+    }
+
+</style>
+
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Helvetica, sans-serif;
+    }
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-family: Helvetica, sans-serif;
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-family: Helvetica, sans-serif;
+    }
+    .form-header-group {
+      font-family: Helvetica, sans-serif;
+    }
+    .form-label {
+      font-family: Helvetica, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: inline-block;
+    float: left;
+    text-align: left;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px 36px 12px 36px px;
+      margin-bottom: 12px 36px 12px 36px px;
+    }
+  
+    .form-all {
+      max-width: 690px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 300px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+    .form-all .qq-upload-button,
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-size: 16px
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-size: 16px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #FFFFFF;
+    }
+  
+    .form-all {
+      color: Black;
+    }
+    .form-header-group .form-header {
+      color: Black;
+    }
+    .form-header-group .form-subHeader {
+      color: Black;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label {
+      color: Black;
+    }
+    .form-sub-label {
+      color: 1a1a25;
+    }
+  
+    .supernova {
+      background-color: undefined;
+    }
+    .supernova body {
+      background: transparent;
+    }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: undefined;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+    .form-all {
+      background-image: none;
+    }
+  
+  .ie-8 .form-all:before { display: none; }
+  .ie-8 {
+    margin-top: auto;
+    margin-top: initial;
+  }
+  
+  /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/buttons/form-submit-button-light.css?3.3.28713"/>
+<form class="jotform-form" action="https://submit.jotform.com/submit/212993111839561/" method="post" name="form_212993111839561" id="212993111839561" accept-charset="utf-8" autocomplete="on">
+  <input type="hidden" name="formID" value="212993111839561" />
+  <input type="hidden" id="JWTContainer" value="" />
+  <input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_1" class="form-header" data-component="header">
+              Medical History
+            </h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_fullname" id="id_3">
+        <label class="form-label form-label-left form-label-auto" id="label_3" for="first_3">
+          Full Name
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_3" class="form-input jf-required">
+          <div data-wrapper-react="true">
+            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+              <input type="text" id="first_3" name="q3_fullName3[first]" class="form-textbox validate[required]" data-defaultvalue="" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" required="" />
+              <label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false"> First Name </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+              <input type="text" id="last_3" name="q3_fullName3[last]" class="form-textbox validate[required]" data-defaultvalue="" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" required="" />
+              <label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_radio" id="id_9">
+        <label class="form-label form-label-top" id="label_9" for="input_9">
+          What is your Gender?
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_9" class="form-input-wide jf-required">
+          <div class="form-single-column" role="group" aria-labelledby="label_9" data-component="radio">
+            <span class="form-radio-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_9" class="form-radio validate[required]" id="input_9_0" name="q9_whatIs" value="Male" required="" />
+              <label id="label_input_9_0" for="input_9_0"> Male </label>
+            </span>
+            <span class="form-radio-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_9" class="form-radio validate[required]" id="input_9_1" name="q9_whatIs" value="Female" required="" />
+              <label id="label_input_9_1" for="input_9_1"> Female </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_checkbox" id="id_5">
+        <label class="form-label form-label-top" id="label_5" for="input_5">
+          Check the conditions that apply to you or to any members of your immediate relatives:
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_5" class="form-input-wide jf-required">
+          <div class="form-single-column" role="group" aria-labelledby="label_5" data-component="checkbox">
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_5" class="form-checkbox validate[required]" id="input_5_0" name="q5_checkThe5[]" value="Asthma" required="" />
+              <label id="label_input_5_0" for="input_5_0"> Asthma </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_5" class="form-checkbox validate[required]" id="input_5_1" name="q5_checkThe5[]" value="Cancer" required="" />
+              <label id="label_input_5_1" for="input_5_1"> Cancer </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_5" class="form-checkbox validate[required]" id="input_5_2" name="q5_checkThe5[]" value="Cardiac disease" required="" />
+              <label id="label_input_5_2" for="input_5_2"> Cardiac disease </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_5" class="form-checkbox validate[required]" id="input_5_3" name="q5_checkThe5[]" value="Diabetes" required="" />
+              <label id="label_input_5_3" for="input_5_3"> Diabetes </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_5" class="form-checkbox validate[required]" id="input_5_4" name="q5_checkThe5[]" value="Hypertension" required="" />
+              <label id="label_input_5_4" for="input_5_4"> Hypertension </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_5" class="form-checkbox validate[required]" id="input_5_5" name="q5_checkThe5[]" value="Psychiatric disorder" required="" />
+              <label id="label_input_5_5" for="input_5_5"> Psychiatric disorder </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_5" class="form-checkbox validate[required]" id="input_5_6" name="q5_checkThe5[]" value="Epilepsy" required="" />
+              <label id="label_input_5_6" for="input_5_6"> Epilepsy </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_checkbox" id="id_6">
+        <label class="form-label form-label-top" id="label_6" for="input_6"> Check the symptoms that you have experienced in the PAST 6 WEEKS </label>
+        <div id="cid_6" class="form-input-wide">
+          <div class="form-single-column" role="group" aria-labelledby="label_6" data-component="checkbox">
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_0" name="q6_checkThe6[]" value="Fever/Chills" />
+              <label id="label_input_6_0" for="input_6_0"> Fever/Chills </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_1" name="q6_checkThe6[]" value="Unexplained change in weight" />
+              <label id="label_input_6_1" for="input_6_1"> Unexplained change in weight </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_2" name="q6_checkThe6[]" value="Fatigue/Malaise/Generalized weakness" />
+              <label id="label_input_6_2" for="input_6_2"> Fatigue/Malaise/Generalized weakness </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_3" name="q6_checkThe6[]" value="Headaches/Migraines" />
+              <label id="label_input_6_3" for="input_6_3"> Headaches/Migraines </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_4" name="q6_checkThe6[]" value="Dizziness" />
+              <label id="label_input_6_4" for="input_6_4"> Dizziness </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_5" name="q6_checkThe6[]" value="Sinus Pain/Pressure/Discharge" />
+              <label id="label_input_6_5" for="input_6_5"> Sinus Pain/Pressure/Discharge </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_6" name="q6_checkThe6[]" value="Excessive snoring" />
+              <label id="label_input_6_6" for="input_6_6"> Excessive snoring </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_7" name="q6_checkThe6[]" value="Wheezing/Chronic Cough" />
+              <label id="label_input_6_7" for="input_6_7"> Wheezing/Chronic Cough </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_8" name="q6_checkThe6[]" value="Shortness of breath" />
+              <label id="label_input_6_8" for="input_6_8"> Shortness of breath </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_9" name="q6_checkThe6[]" value="Chest pain, pressure or tightness" />
+              <label id="label_input_6_9" for="input_6_9"> Chest pain, pressure or tightness </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_10" name="q6_checkThe6[]" value="Swelling of hands/feet/ankles" />
+              <label id="label_input_6_10" for="input_6_10"> Swelling of hands/feet/ankles </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_11" name="q6_checkThe6[]" value="Nausea/Vomiting" />
+              <label id="label_input_6_11" for="input_6_11"> Nausea/Vomiting </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_12" name="q6_checkThe6[]" value="Abdominal pain" />
+              <label id="label_input_6_12" for="input_6_12"> Abdominal pain </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_13" name="q6_checkThe6[]" value="Heartburn" />
+              <label id="label_input_6_13" for="input_6_13"> Heartburn </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_14" name="q6_checkThe6[]" value="Constipation or diarrhea" />
+              <label id="label_input_6_14" for="input_6_14"> Constipation or diarrhea </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_15" name="q6_checkThe6[]" value="Stiffness/Pain in joints/muscles" />
+              <label id="label_input_6_15" for="input_6_15"> Stiffness/Pain in joints/muscles </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_16" name="q6_checkThe6[]" value="Joint swelling" />
+              <label id="label_input_6_16" for="input_6_16"> Joint swelling </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_17" name="q6_checkThe6[]" value="Bleeding/Easy bruising" />
+              <label id="label_input_6_17" for="input_6_17"> Bleeding/Easy bruising </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_18" name="q6_checkThe6[]" value="Excessive urination" />
+              <label id="label_input_6_18" for="input_6_18"> Excessive urination </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_19" name="q6_checkThe6[]" value="Excessive thirst/hunger" />
+              <label id="label_input_6_19" for="input_6_19"> Excessive thirst/hunger </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_20" name="q6_checkThe6[]" value="Hot flashes" />
+              <label id="label_input_6_20" for="input_6_20"> Hot flashes </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_21" name="q6_checkThe6[]" value="Painful/Bloody urination" />
+              <label id="label_input_6_21" for="input_6_21"> Painful/Bloody urination </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_22" name="q6_checkThe6[]" value="Difficulty urinating/Night-time urination" />
+              <label id="label_input_6_22" for="input_6_22"> Difficulty urinating/Night-time urination </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_23" name="q6_checkThe6[]" value="Urinary incontinence (leakage)" />
+              <label id="label_input_6_23" for="input_6_23"> Urinary incontinence (leakage) </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_24" name="q6_checkThe6[]" value="Sexual Difficulties/Painful intercourse" />
+              <label id="label_input_6_24" for="input_6_24"> Sexual Difficulties/Painful intercourse </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_25" name="q6_checkThe6[]" value="Rash" />
+              <label id="label_input_6_25" for="input_6_25"> Rash </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_26" name="q6_checkThe6[]" value="Anxiety/Panic Attacks" />
+              <label id="label_input_6_26" for="input_6_26"> Anxiety/Panic Attacks </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_27" name="q6_checkThe6[]" value="Concentration Difficulty" />
+              <label id="label_input_6_27" for="input_6_27"> Concentration Difficulty </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_28" name="q6_checkThe6[]" value="Feelings of Guilt" />
+              <label id="label_input_6_28" for="input_6_28"> Feelings of Guilt </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_29" name="q6_checkThe6[]" value="Insomnia/Problems with Sleep" />
+              <label id="label_input_6_29" for="input_6_29"> Insomnia/Problems with Sleep </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_30" name="q6_checkThe6[]" value="Loss of energy" />
+              <label id="label_input_6_30" for="input_6_30"> Loss of energy </label>
+            </span>
+            <span class="form-checkbox-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="checkbox" aria-describedby="label_6" class="form-checkbox" id="input_6_31" name="q6_checkThe6[]" value="Thoughts of harming self or others" />
+              <label id="label_input_6_31" for="input_6_31"> Thoughts of harming self or others </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-field-hidden" style="display:none;" data-type="control_datetime" id="id_17">
+        <label class="form-label form-label-left form-label-auto" id="label_17" for="month_17"> Date of last menstrual period </label>
+        <div id="cid_17" class="form-input">
+          <div data-wrapper-react="true" class="extended notLiteMode">
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="form-textbox validate[limitDate]" id="month_17" name="q17_dateOf[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="10" autoComplete="off" aria-labelledby="label_17 sublabel_17_month" />
+              <span class="date-separate" aria-hidden="true">
+                 -
+              </span>
+              <label class="form-sub-label" for="month_17" id="sublabel_17_month" style="min-height:13px" aria-hidden="false"> Month </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="currentDate form-textbox validate[limitDate]" id="day_17" name="q17_dateOf[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="27" autoComplete="off" aria-labelledby="label_17 sublabel_17_day" />
+              <span class="date-separate" aria-hidden="true">
+                 -
+              </span>
+              <label class="form-sub-label" for="day_17" id="sublabel_17_day" style="min-height:13px" aria-hidden="false"> Day </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="form-textbox validate[limitDate]" id="year_17" name="q17_dateOf[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2021" autoComplete="off" aria-labelledby="label_17 sublabel_17_year" />
+              <label class="form-sub-label" for="year_17" id="sublabel_17_year" style="min-height:13px" aria-hidden="false"> Year </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <img class="showAutoCalendar newDefaultTheme-dateIcon icon-seperatedMode" alt="Pick a Date" id="input_17_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+              <label class="form-sub-label" for="input_17_pick" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="true"> Date Picker Icon </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-field-hidden" style="display:none;" data-type="control_number" id="id_19">
+        <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19"> Number of pregnancies </label>
+        <div id="cid_19" class="form-input">
+          <input type="number" id="input_19" name="q19_numberOf19" data-type="input-number" class=" form-number-input form-textbox validate[Numeric]" data-defaultvalue="" style="width:36px" size="2" value="" placeholder=" " data-component="number" aria-labelledby="label_19" step="any" />
+        </div>
+      </li>
+      <li class="form-line form-field-hidden" style="display:none;" data-type="control_number" id="id_20">
+        <label class="form-label form-label-left form-label-auto" id="label_20" for="input_20"> Number of live births </label>
+        <div id="cid_20" class="form-input">
+          <input type="number" id="input_20" name="q20_numberOf" data-type="input-number" class=" form-number-input form-textbox validate[Numeric]" data-defaultvalue="" style="width:36px" size="2" value="" placeholder=" " data-component="number" aria-labelledby="label_20" step="any" />
+        </div>
+      </li>
+      <li class="form-line form-field-hidden" style="display:none;" data-type="control_radio" id="id_18">
+        <label class="form-label form-label-left form-label-auto" id="label_18" for="input_18"> Are you taking any hormones or birth control? </label>
+        <div id="cid_18" class="form-input">
+          <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_18" data-component="radio">
+            <span class="form-radio-item">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_18" class="form-radio" id="input_18_0" name="q18_areYou18" value="Yes" />
+              <label id="label_input_18_0" for="input_18_0"> Yes </label>
+            </span>
+            <span class="form-radio-item">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_18" class="form-radio" id="input_18_1" name="q18_areYou18" value="No" />
+              <label id="label_input_18_1" for="input_18_1"> No </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-field-hidden" style="display:none;" data-type="control_radio" id="id_21">
+        <label class="form-label form-label-left form-label-auto" id="label_21" for="input_21"> Do you have irregular or painful periods? </label>
+        <div id="cid_21" class="form-input">
+          <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_21" data-component="radio">
+            <span class="form-radio-item">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_21" class="form-radio" id="input_21_0" name="q21_doYou21" value="Yes" />
+              <label id="label_input_21_0" for="input_21_0"> Yes </label>
+            </span>
+            <span class="form-radio-item">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_21" class="form-radio" id="input_21_1" name="q21_doYou21" value="No" />
+              <label id="label_input_21_1" for="input_21_1"> No </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_radio" id="id_7">
+        <label class="form-label form-label-top" id="label_7" for="input_7">
+          Are you currently taking any medication?
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_7" class="form-input-wide jf-required">
+          <div class="form-single-column" role="group" aria-labelledby="label_7" data-component="radio">
+            <span class="form-radio-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_7" class="form-radio validate[required]" id="input_7_0" name="q7_areYou" value="Yes" required="" />
+              <label id="label_input_7_0" for="input_7_0"> Yes </label>
+            </span>
+            <span class="form-radio-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_7" class="form-radio validate[required]" id="input_7_1" name="q7_areYou" value="No" required="" />
+              <label id="label_input_7_1" for="input_7_1"> No </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textarea" id="id_22">
+        <label class="form-label form-label-left form-label-auto" id="label_22" for="input_22"> If so, please list: </label>
+        <div id="cid_22" class="form-input">
+          <textarea id="input_22" class="form-textarea" name="q22_ifSo" cols="40" rows="6" data-component="textarea" aria-labelledby="label_22"></textarea>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_radio" id="id_8">
+        <label class="form-label form-label-top" id="label_8" for="input_8">
+          Do you have any medication allergies?
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_8" class="form-input-wide jf-required">
+          <div class="form-single-column" role="group" aria-labelledby="label_8" data-component="radio">
+            <span class="form-radio-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_8" class="form-radio validate[required]" id="input_8_0" name="q8_doYou" value="Yes" required="" />
+              <label id="label_input_8_0" for="input_8_0"> Yes </label>
+            </span>
+            <span class="form-radio-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_8" class="form-radio validate[required]" id="input_8_1" name="q8_doYou" value="No" required="" />
+              <label id="label_input_8_1" for="input_8_1"> No </label>
+            </span>
+            <span class="form-radio-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_8" class="form-radio validate[required]" id="input_8_2" name="q8_doYou" value="Not Sure" required="" />
+              <label id="label_input_8_2" for="input_8_2"> Not Sure </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_dropdown" id="id_10">
+        <label class="form-label form-label-top" id="label_10" for="input_10">
+          Do you use or do you have history of using tobacco?
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_10" class="form-input-wide jf-required">
+          <select class="form-dropdown validate[required]" id="input_10" name="q10_doYou10" style="width:70px" data-component="dropdown" required="">
+            <option value="">  </option>
+            <option value="Yes"> Yes </option>
+            <option selected="" value="No"> No </option>
+          </select>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_dropdown" id="id_11">
+        <label class="form-label form-label-top" id="label_11" for="input_11">
+          Do you use or do you have history of using illegal drugs?
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_11" class="form-input-wide jf-required">
+          <select class="form-dropdown validate[required]" id="input_11" name="q11_doYou11" style="width:70px" data-component="dropdown" required="">
+            <option value="">  </option>
+            <option value="Yes"> Yes </option>
+            <option selected="" value="No"> No </option>
+          </select>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_radio" id="id_12">
+        <label class="form-label form-label-top" id="label_12" for="input_12">
+          How often do you consume alcohol?
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_12" class="form-input-wide jf-required">
+          <div class="form-multiple-column" data-columncount="3" role="group" aria-labelledby="label_12" data-component="radio">
+            <span class="form-radio-item">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_0" name="q12_howOften" value="Daily" required="" />
+              <label id="label_input_12_0" for="input_12_0"> Daily </label>
+            </span>
+            <span class="form-radio-item">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_1" name="q12_howOften" value="Weekly" required="" />
+              <label id="label_input_12_1" for="input_12_1"> Weekly </label>
+            </span>
+            <span class="form-radio-item">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_2" name="q12_howOften" value="Monthly" required="" />
+              <label id="label_input_12_2" for="input_12_2"> Monthly </label>
+            </span>
+            <span class="form-radio-item" style="clear:left">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_3" name="q12_howOften" value="Occasionally" required="" />
+              <label id="label_input_12_3" for="input_12_3"> Occasionally </label>
+            </span>
+            <span class="form-radio-item">
+              <span class="dragger-item">
+              </span>
+              <input type="radio" aria-describedby="label_12" class="form-radio validate[required]" id="input_12_4" name="q12_howOften" value="Never" required="" />
+              <label id="label_input_12_4" for="input_12_4"> Never </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_slider" id="id_38">
+        <label class="form-label form-label-left form-label-auto" id="label_38" for="input_38"> How healthy do you feel in general? </label>
+        <div id="cid_38" class="form-input">
+          <div data-wrapper-react="true">
+            <input type="range" data-component="slider" class="form-textbox" id="input_38" name="q38_howHealthy38" />
+          </div>
+        </div>
+      </li>
+      <li id="cid_23" class="form-input-wide" data-type="control_pagebreak">
+        <div class="form-pagebreak" data-component="pagebreak">
+          <div class="form-pagebreak-back-container">
+            <button id="form-pagebreak-back_23" type="button" class="form-pagebreak-back  form-submit-button-light jf-form-buttons" data-component="pagebreak-back">
+              Back
+            </button>
+          </div>
+          <div class="form-pagebreak-next-container">
+            <button id="form-pagebreak-next_23" type="button" class="form-pagebreak-next  form-submit-button-light jf-form-buttons" data-component="pagebreak-next">
+              Next
+            </button>
+          </div>
+          <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_23">
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="form-section page-section" style="display:none;">
+      <li class="form-line" data-type="control_text" id="id_24">
+        <div id="cid_24" class="form-input-wide">
+          <div id="text_24" class="form-html" data-component="text">
+            
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_textbox" id="id_25">
+        <label class="form-label form-label-top" id="label_25" for="input_25">
+          Patient Initials:
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_25" class="form-input-wide jf-required">
+          <input type="text" id="input_25" name="q25_patientInitials" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="4" value="" maxLength="4" placeholder=" " data-component="textbox" aria-labelledby="label_25" required="" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_26">
+        <div id="cid_26" class="form-input-wide">
+          <div id="text_26" class="form-html" data-component="text">
+            Patient acknowledges and agrees that Physician and Group, along with their assigns, will be entitled to use any data, discoveries, results, improvements or other information resulting from the Services for any lawful purpose whatsoever, including, but not limited to, internal research, academic or other publications or commercial purposes. All data will be kept on a Cloud Based system that is password protected, and accessible to MD Revolution staff.
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_33">
+        <label class="form-label form-label-top" id="label_33" for="input_33">
+          Patient Name
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_33" class="form-input-wide jf-required">
+          <input type="text" id="input_33" name="q33_patientName33" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="30" value="" placeholder=" " data-component="textbox" aria-labelledby="label_33" required="" />
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-2 jf-required" data-type="control_datetime" id="id_29">
+        <label class="form-label form-label-top" id="label_29" for="month_29">
+          Today's Date
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_29" class="form-input-wide jf-required">
+          <div data-wrapper-react="true" class="extended notLiteMode">
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="form-textbox validate[required, limitDate]" id="month_29" name="q29_todaysDate[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="10" required="" autoComplete="off" aria-labelledby="label_29 sublabel_29_month" />
+              <span class="date-separate" aria-hidden="true">
+                 -
+              </span>
+              <label class="form-sub-label" for="month_29" id="sublabel_29_month" style="min-height:13px" aria-hidden="false"> Month </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="currentDate form-textbox validate[required, limitDate]" id="day_29" name="q29_todaysDate[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="27" required="" autoComplete="off" aria-labelledby="label_29 sublabel_29_day" />
+              <span class="date-separate" aria-hidden="true">
+                 -
+              </span>
+              <label class="form-sub-label" for="day_29" id="sublabel_29_day" style="min-height:13px" aria-hidden="false"> Day </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="form-textbox validate[required, limitDate]" id="year_29" name="q29_todaysDate[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2021" required="" autoComplete="off" aria-labelledby="label_29 sublabel_29_year" />
+              <label class="form-sub-label" for="year_29" id="sublabel_29_year" style="min-height:13px" aria-hidden="false"> Year </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <img class="showAutoCalendar newDefaultTheme-dateIcon icon-seperatedMode" alt="Pick a Date" id="input_29_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+              <label class="form-sub-label" for="input_29_pick" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="true"> Date Picker Icon </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_birthdate" id="id_28">
+        <label class="form-label form-label-left form-label-auto" id="label_28" for="input_28">
+          Patient Date of Birth
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_28" class="form-input jf-required">
+          <div data-wrapper-react="true">
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <select name="q28_patientDate[month]" id="input_28_month" class="form-dropdown validate[required]" data-component="birthdate-month" aria-labelledby="label_28 sublabel_28_month">
+                <option>  </option>
+                <option value="January"> January </option>
+                <option value="February"> February </option>
+                <option value="March"> March </option>
+                <option value="April"> April </option>
+                <option value="May"> May </option>
+                <option value="June"> June </option>
+                <option value="July"> July </option>
+                <option value="August"> August </option>
+                <option value="September"> September </option>
+                <option value="October"> October </option>
+                <option value="November"> November </option>
+                <option value="December"> December </option>
+              </select>
+              <label class="form-sub-label" for="input_28_month" id="sublabel_28_month" style="min-height:13px" aria-hidden="false"> Month </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <select name="q28_patientDate[day]" id="input_28_day" class="form-dropdown validate[required]" data-component="birthdate-day" aria-labelledby="label_28 sublabel_28_day">
+                <option>  </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                <option value="13"> 13 </option>
+                <option value="14"> 14 </option>
+                <option value="15"> 15 </option>
+                <option value="16"> 16 </option>
+                <option value="17"> 17 </option>
+                <option value="18"> 18 </option>
+                <option value="19"> 19 </option>
+                <option value="20"> 20 </option>
+                <option value="21"> 21 </option>
+                <option value="22"> 22 </option>
+                <option value="23"> 23 </option>
+                <option value="24"> 24 </option>
+                <option value="25"> 25 </option>
+                <option value="26"> 26 </option>
+                <option value="27"> 27 </option>
+                <option value="28"> 28 </option>
+                <option value="29"> 29 </option>
+                <option value="30"> 30 </option>
+                <option value="31"> 31 </option>
+              </select>
+              <label class="form-sub-label" for="input_28_day" id="sublabel_28_day" style="min-height:13px" aria-hidden="false"> Day </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <select name="q28_patientDate[year]" id="input_28_year" class="form-dropdown validate[required]" data-component="birthdate-year" aria-labelledby="label_28 sublabel_28_year">
+                <option>  </option>
+                <option value="2021"> 2021 </option>
+                <option value="2020"> 2020 </option>
+                <option value="2019"> 2019 </option>
+                <option value="2018"> 2018 </option>
+                <option value="2017"> 2017 </option>
+                <option value="2016"> 2016 </option>
+                <option value="2015"> 2015 </option>
+                <option value="2014"> 2014 </option>
+                <option value="2013"> 2013 </option>
+                <option value="2012"> 2012 </option>
+                <option value="2011"> 2011 </option>
+                <option value="2010"> 2010 </option>
+                <option value="2009"> 2009 </option>
+                <option value="2008"> 2008 </option>
+                <option value="2007"> 2007 </option>
+                <option value="2006"> 2006 </option>
+                <option value="2005"> 2005 </option>
+                <option value="2004"> 2004 </option>
+                <option value="2003"> 2003 </option>
+                <option value="2002"> 2002 </option>
+                <option value="2001"> 2001 </option>
+                <option value="2000"> 2000 </option>
+                <option value="1999"> 1999 </option>
+                <option value="1998"> 1998 </option>
+                <option value="1997"> 1997 </option>
+                <option value="1996"> 1996 </option>
+                <option value="1995"> 1995 </option>
+                <option value="1994"> 1994 </option>
+                <option value="1993"> 1993 </option>
+                <option value="1992"> 1992 </option>
+                <option value="1991"> 1991 </option>
+                <option value="1990"> 1990 </option>
+                <option value="1989"> 1989 </option>
+                <option value="1988"> 1988 </option>
+                <option value="1987"> 1987 </option>
+                <option value="1986"> 1986 </option>
+                <option value="1985"> 1985 </option>
+                <option value="1984"> 1984 </option>
+                <option value="1983"> 1983 </option>
+                <option value="1982"> 1982 </option>
+                <option value="1981"> 1981 </option>
+                <option value="1980"> 1980 </option>
+                <option value="1979"> 1979 </option>
+                <option value="1978"> 1978 </option>
+                <option value="1977"> 1977 </option>
+                <option value="1976"> 1976 </option>
+                <option value="1975"> 1975 </option>
+                <option value="1974"> 1974 </option>
+                <option value="1973"> 1973 </option>
+                <option value="1972"> 1972 </option>
+                <option value="1971"> 1971 </option>
+                <option value="1970"> 1970 </option>
+                <option value="1969"> 1969 </option>
+                <option value="1968"> 1968 </option>
+                <option value="1967"> 1967 </option>
+                <option value="1966"> 1966 </option>
+                <option value="1965"> 1965 </option>
+                <option value="1964"> 1964 </option>
+                <option value="1963"> 1963 </option>
+                <option value="1962"> 1962 </option>
+                <option value="1961"> 1961 </option>
+                <option value="1960"> 1960 </option>
+                <option value="1959"> 1959 </option>
+                <option value="1958"> 1958 </option>
+                <option value="1957"> 1957 </option>
+                <option value="1956"> 1956 </option>
+                <option value="1955"> 1955 </option>
+                <option value="1954"> 1954 </option>
+                <option value="1953"> 1953 </option>
+                <option value="1952"> 1952 </option>
+                <option value="1951"> 1951 </option>
+                <option value="1950"> 1950 </option>
+                <option value="1949"> 1949 </option>
+                <option value="1948"> 1948 </option>
+                <option value="1947"> 1947 </option>
+                <option value="1946"> 1946 </option>
+                <option value="1945"> 1945 </option>
+                <option value="1944"> 1944 </option>
+                <option value="1943"> 1943 </option>
+                <option value="1942"> 1942 </option>
+                <option value="1941"> 1941 </option>
+                <option value="1940"> 1940 </option>
+                <option value="1939"> 1939 </option>
+                <option value="1938"> 1938 </option>
+                <option value="1937"> 1937 </option>
+                <option value="1936"> 1936 </option>
+                <option value="1935"> 1935 </option>
+                <option value="1934"> 1934 </option>
+                <option value="1933"> 1933 </option>
+                <option value="1932"> 1932 </option>
+                <option value="1931"> 1931 </option>
+                <option value="1930"> 1930 </option>
+                <option value="1929"> 1929 </option>
+                <option value="1928"> 1928 </option>
+                <option value="1927"> 1927 </option>
+                <option value="1926"> 1926 </option>
+                <option value="1925"> 1925 </option>
+                <option value="1924"> 1924 </option>
+                <option value="1923"> 1923 </option>
+                <option value="1922"> 1922 </option>
+                <option value="1921"> 1921 </option>
+                <option value="1920"> 1920 </option>
+              </select>
+              <label class="form-sub-label" for="input_28_year" id="sublabel_28_year" style="min-height:13px" aria-hidden="false"> Year </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li id="cid_30" class="form-input-wide" data-type="control_pagebreak">
+        <div class="form-pagebreak" data-component="pagebreak">
+          <div class="form-pagebreak-back-container">
+            <button id="form-pagebreak-back_30" type="button" class="form-pagebreak-back  form-submit-button-light jf-form-buttons" data-component="pagebreak-back">
+              Back
+            </button>
+          </div>
+          <div class="form-pagebreak-next-container">
+            <button id="form-pagebreak-next_30" type="button" class="form-pagebreak-next  form-submit-button-light jf-form-buttons" data-component="pagebreak-next">
+              Next
+            </button>
+          </div>
+          <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_30">
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="form-section page-section" style="display:none;">
+      <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_fullname" id="id_32">
+        <label class="form-label form-label-left" id="label_32" for="first_32">
+          I,
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_32" class="form-input jf-required">
+          <div data-wrapper-react="true">
+            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+              <input type="text" id="first_32" name="q32_i32[first]" class="form-textbox validate[required]" data-defaultvalue="" size="10" value="" data-component="first" aria-labelledby="label_32 sublabel_32_first" required="" />
+              <label class="form-sub-label" for="first_32" id="sublabel_32_first" style="min-height:13px" aria-hidden="false"> First Name </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+              <input type="text" id="last_32" name="q32_i32[last]" class="form-textbox validate[required]" data-defaultvalue="" size="15" value="" data-component="last" aria-labelledby="label_32 sublabel_32_last" required="" />
+              <label class="form-sub-label" for="last_32" id="sublabel_32_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_text" id="id_31">
+        <div id="cid_31" class="form-input-wide">
+          <div id="text_31" class="form-html" data-component="text">
+            
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_27">
+        <label class="form-label form-label-top" id="label_27" for="input_27">
+          Patient Name
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_27" class="form-input-wide jf-required">
+          <input type="text" id="input_27" name="q27_patientName" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="30" value="" placeholder=" " data-component="textbox" aria-labelledby="label_27" required="" />
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-2 jf-required" data-type="control_datetime" id="id_34">
+        <label class="form-label form-label-top" id="label_34" for="month_34">
+          Today's Date
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_34" class="form-input-wide jf-required">
+          <div data-wrapper-react="true" class="extended notLiteMode">
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="form-textbox validate[required, limitDate]" id="month_34" name="q34_todaysDate34[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="10" required="" autoComplete="off" aria-labelledby="label_34 sublabel_34_month" />
+              <span class="date-separate" aria-hidden="true">
+                 -
+              </span>
+              <label class="form-sub-label" for="month_34" id="sublabel_34_month" style="min-height:13px" aria-hidden="false"> Month </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="currentDate form-textbox validate[required, limitDate]" id="day_34" name="q34_todaysDate34[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="27" required="" autoComplete="off" aria-labelledby="label_34 sublabel_34_day" />
+              <span class="date-separate" aria-hidden="true">
+                 -
+              </span>
+              <label class="form-sub-label" for="day_34" id="sublabel_34_day" style="min-height:13px" aria-hidden="false"> Day </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="tel" class="form-textbox validate[required, limitDate]" id="year_34" name="q34_todaysDate34[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2021" required="" autoComplete="off" aria-labelledby="label_34 sublabel_34_year" />
+              <label class="form-sub-label" for="year_34" id="sublabel_34_year" style="min-height:13px" aria-hidden="false"> Year </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <img class="showAutoCalendar newDefaultTheme-dateIcon icon-seperatedMode" alt="Pick a Date" id="input_34_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+              <label class="form-sub-label" for="input_34_pick" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="true"> Date Picker Icon </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_birthdate" id="id_35">
+        <label class="form-label form-label-left form-label-auto" id="label_35" for="input_35">
+          Patient Date of Birth
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_35" class="form-input jf-required">
+          <div data-wrapper-react="true">
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <select name="q35_patientDate35[month]" id="input_35_month" class="form-dropdown validate[required]" data-component="birthdate-month" aria-labelledby="label_35 sublabel_35_month">
+                <option>  </option>
+                <option value="January"> January </option>
+                <option value="February"> February </option>
+                <option value="March"> March </option>
+                <option value="April"> April </option>
+                <option value="May"> May </option>
+                <option value="June"> June </option>
+                <option value="July"> July </option>
+                <option value="August"> August </option>
+                <option value="September"> September </option>
+                <option value="October"> October </option>
+                <option value="November"> November </option>
+                <option value="December"> December </option>
+              </select>
+              <label class="form-sub-label" for="input_35_month" id="sublabel_35_month" style="min-height:13px" aria-hidden="false"> Month </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <select name="q35_patientDate35[day]" id="input_35_day" class="form-dropdown validate[required]" data-component="birthdate-day" aria-labelledby="label_35 sublabel_35_day">
+                <option>  </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
+                <option value="13"> 13 </option>
+                <option value="14"> 14 </option>
+                <option value="15"> 15 </option>
+                <option value="16"> 16 </option>
+                <option value="17"> 17 </option>
+                <option value="18"> 18 </option>
+                <option value="19"> 19 </option>
+                <option value="20"> 20 </option>
+                <option value="21"> 21 </option>
+                <option value="22"> 22 </option>
+                <option value="23"> 23 </option>
+                <option value="24"> 24 </option>
+                <option value="25"> 25 </option>
+                <option value="26"> 26 </option>
+                <option value="27"> 27 </option>
+                <option value="28"> 28 </option>
+                <option value="29"> 29 </option>
+                <option value="30"> 30 </option>
+                <option value="31"> 31 </option>
+              </select>
+              <label class="form-sub-label" for="input_35_day" id="sublabel_35_day" style="min-height:13px" aria-hidden="false"> Day </label>
+            </span>
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <select name="q35_patientDate35[year]" id="input_35_year" class="form-dropdown validate[required]" data-component="birthdate-year" aria-labelledby="label_35 sublabel_35_year">
+                <option>  </option>
+                <option value="2021"> 2021 </option>
+                <option value="2020"> 2020 </option>
+                <option value="2019"> 2019 </option>
+                <option value="2018"> 2018 </option>
+                <option value="2017"> 2017 </option>
+                <option value="2016"> 2016 </option>
+                <option value="2015"> 2015 </option>
+                <option value="2014"> 2014 </option>
+                <option value="2013"> 2013 </option>
+                <option value="2012"> 2012 </option>
+                <option value="2011"> 2011 </option>
+                <option value="2010"> 2010 </option>
+                <option value="2009"> 2009 </option>
+                <option value="2008"> 2008 </option>
+                <option value="2007"> 2007 </option>
+                <option value="2006"> 2006 </option>
+                <option value="2005"> 2005 </option>
+                <option value="2004"> 2004 </option>
+                <option value="2003"> 2003 </option>
+                <option value="2002"> 2002 </option>
+                <option value="2001"> 2001 </option>
+                <option value="2000"> 2000 </option>
+                <option value="1999"> 1999 </option>
+                <option value="1998"> 1998 </option>
+                <option value="1997"> 1997 </option>
+                <option value="1996"> 1996 </option>
+                <option value="1995"> 1995 </option>
+                <option value="1994"> 1994 </option>
+                <option value="1993"> 1993 </option>
+                <option value="1992"> 1992 </option>
+                <option value="1991"> 1991 </option>
+                <option value="1990"> 1990 </option>
+                <option value="1989"> 1989 </option>
+                <option value="1988"> 1988 </option>
+                <option value="1987"> 1987 </option>
+                <option value="1986"> 1986 </option>
+                <option value="1985"> 1985 </option>
+                <option value="1984"> 1984 </option>
+                <option value="1983"> 1983 </option>
+                <option value="1982"> 1982 </option>
+                <option value="1981"> 1981 </option>
+                <option value="1980"> 1980 </option>
+                <option value="1979"> 1979 </option>
+                <option value="1978"> 1978 </option>
+                <option value="1977"> 1977 </option>
+                <option value="1976"> 1976 </option>
+                <option value="1975"> 1975 </option>
+                <option value="1974"> 1974 </option>
+                <option value="1973"> 1973 </option>
+                <option value="1972"> 1972 </option>
+                <option value="1971"> 1971 </option>
+                <option value="1970"> 1970 </option>
+                <option value="1969"> 1969 </option>
+                <option value="1968"> 1968 </option>
+                <option value="1967"> 1967 </option>
+                <option value="1966"> 1966 </option>
+                <option value="1965"> 1965 </option>
+                <option value="1964"> 1964 </option>
+                <option value="1963"> 1963 </option>
+                <option value="1962"> 1962 </option>
+                <option value="1961"> 1961 </option>
+                <option value="1960"> 1960 </option>
+                <option value="1959"> 1959 </option>
+                <option value="1958"> 1958 </option>
+                <option value="1957"> 1957 </option>
+                <option value="1956"> 1956 </option>
+                <option value="1955"> 1955 </option>
+                <option value="1954"> 1954 </option>
+                <option value="1953"> 1953 </option>
+                <option value="1952"> 1952 </option>
+                <option value="1951"> 1951 </option>
+                <option value="1950"> 1950 </option>
+                <option value="1949"> 1949 </option>
+                <option value="1948"> 1948 </option>
+                <option value="1947"> 1947 </option>
+                <option value="1946"> 1946 </option>
+                <option value="1945"> 1945 </option>
+                <option value="1944"> 1944 </option>
+                <option value="1943"> 1943 </option>
+                <option value="1942"> 1942 </option>
+                <option value="1941"> 1941 </option>
+                <option value="1940"> 1940 </option>
+                <option value="1939"> 1939 </option>
+                <option value="1938"> 1938 </option>
+                <option value="1937"> 1937 </option>
+                <option value="1936"> 1936 </option>
+                <option value="1935"> 1935 </option>
+                <option value="1934"> 1934 </option>
+                <option value="1933"> 1933 </option>
+                <option value="1932"> 1932 </option>
+                <option value="1931"> 1931 </option>
+                <option value="1930"> 1930 </option>
+                <option value="1929"> 1929 </option>
+                <option value="1928"> 1928 </option>
+                <option value="1927"> 1927 </option>
+                <option value="1926"> 1926 </option>
+                <option value="1925"> 1925 </option>
+                <option value="1924"> 1924 </option>
+                <option value="1923"> 1923 </option>
+                <option value="1922"> 1922 </option>
+                <option value="1921"> 1921 </option>
+                <option value="1920"> 1920 </option>
+              </select>
+              <label class="form-sub-label" for="input_35_year" id="sublabel_35_year" style="min-height:13px" aria-hidden="false"> Year </label>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textarea" id="id_36">
+        <label class="form-label form-label-left form-label-auto" id="label_36" for="input_36"> Any exceptions to medical record access: </label>
+        <div id="cid_36" class="form-input">
+          <textarea id="input_36" class="form-textarea" name="q36_anyExceptions" cols="40" rows="6" data-component="textarea" aria-labelledby="label_36"></textarea>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_37">
+        <div id="cid_37" class="form-input-wide">
+          <div style="text-align:center" data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
+            <button id="input_37" type="submit" class="form-submit-button form-submit-button-light submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+              Submit
+            </button>
+            <span>
+               
+            </span>
+            <button id="input_print_37" type="button" class="form-submit-print form-submit-button-light jf-form-buttons" data-component="button">
+              <img src="https://cdn.jotfor.ms/images/printer.png" style="vertical-align:middle" />
+              <span id="span_print_37" class="span_print">
+                Print Form
+              </span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li style="display:none">
+        Should be Empty:
+        <input type="text" name="website" value="" />
+      </li>
+    </ul>
+  </div>
+  <script>
+  JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+  JotForm.poweredByText = "Powered by Jotform";
+  </script>
+  <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="212993111839561" />
+  <script type="text/javascript">
+  var all_spc = document.querySelectorAll("form[id='212993111839561'] .si" + "mple" + "_spc");
+for (var i = 0; i < all_spc.length; i++)
+{
+  all_spc[i].value = "212993111839561-212993111839561";
+}
+  </script>
+  <div class="formFooter-heightMask">
+  </div>
+  <div class="formFooter f6 branding21">
+    <div class="formFooter-wrapper formFooter-leftSide">
+          </div>
+    <div class="formFooter-wrapper formFooter-rightSide">
+      <span class="formFooter-text">
+        Code4Intergrity
+      </span>
+      <a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=212993111839561&utm_content=jotform_button&utm_campaign=powered_by_jotform_le" target="_blank">Create your own Jotform</a>
+    </div>
+  </div>
+  <input type="hidden" id="input_13" name="q13_email13" class="form-hidden" data-defaultvalue="admin@mdrevolution.com" value="admin@mdrevolution.com" data-component="hidden" />
+</form>

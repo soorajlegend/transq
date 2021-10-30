@@ -57,6 +57,9 @@
                  class="sidebar-divider"> <li class="nav-item"> <a
                  class="nav-link" href="carrerOffer.php"> <i class="fa fa-fw
                  fa-handshake"></i> <span>Carrer Offers</span></a> </li><hr
+                 class="sidebar-divider"> <li class="nav-item"><a
+                 class="nav-link" href="ourApplication.php"> <i class="fa fa-fw
+                 fa-file"></i> <span>Our Applications</span></a> </li><hr
                  class="sidebar-divider"> <li class="nav-item"> <a
                  class="nav-link" href="settings.php"> <i class="fa fa-fw
                  fa-cog"></i> <span>Setting</span></a> </li>
