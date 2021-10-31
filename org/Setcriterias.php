@@ -10,15 +10,16 @@ if (strlen($_SESSION['user_id'] == 0)) {
 $alert="";
 $org_id=$_SESSION['user_id'];
 if (isset($_POST['submit'])) {
-    $title = $_POST['title'];
-    $disc = $_POST['disc'];
-    $mrn = $_POST['mrn'];
-    $sdate = $_POST['sdate'];
-    $edate = $_POST['edate'];
-        if ($sdate == $edate) {
-            $alert = '<script>swal("Invalid", "Starting and closing date are equal!", "error")</script>';
-        } else {
-            $sql = "INSERT INTO applications (org_id,title,discription,max_req_num,starting_date,closing_date) VALUES ('$org_id','$title','$disc','$mrn','$sdate','$edate')";
+    $app = $_POST['app'];
+    $minAge = $_POST['minAge'];
+    $maxAge = $_POST['maxAge'];
+    $credit = $_POST['credit'];
+    $math = $_POST['math'];
+    $eng = $_POST['eng'];
+    $maleHeight = $_POST['maleHeight'];
+    $femaleHeight = $_POST['femaleHeight'];
+    $hypertension = $_POST['hypertension'];
+            $sql = "INSERT INTO criterias (app_id,minAge,maxAge,credit,math,eng,maleHeight,femaleHeight, hypertension) VALUES ('$app','$minAge','$maxAge','$credit','$math','$eng','$maleHeight','$femaleHeight','$hypertension')";
             if ($con->query($sql) === true) {
                 $lastid = $con->insert_id;
                 session_start();
@@ -38,7 +39,7 @@ swal({
             }
 
         }
-    }
+ 
 
 
 
@@ -84,12 +85,35 @@ swal({
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                <form action="NewApp.php" method="post">
+                <form action="Setcriterias.php" method="post">
                     <?php echo $alert; ?>
+                    <input type="hidden" name="app" value="<?php echo $app; ?>">
             <div class="name"><h3><b>Set Criterias</b></h3></div>
             <hr>
+               <!-- Age Range -->
+                    <div class="container">
+                    <div class="row">
+                    <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-percent text-muted"></i>
+                            </span>
+                        </div>
+                        <input id="" type="Number" name="minAge" placeholder="Minimum Age" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
 
-                    <!-- Title -->
+                     <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-percent text-muted"></i>
+                            </span>
+                        </div> 
+                        <input id="" type="Number" name="maxAge" placeholder="Maximum Age" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+                    </div>  
+                    </div>
+
+                    <!-- number of credit -->
                     <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
@@ -100,49 +124,38 @@ swal({
                         <input id="" type="Number" name="credit" placeholder="Minimum number of credit Required" class="form-control bg-white border-left-0 border-md" required>
                     </div>
 
-                    <!-- Discription -->
-                    
-
-                    <!-- Required Number -->
-                    <div class="container">
-                    <div class="row">
-                    <div class="input-group col-lg-6 mb-4">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text bg-white px-4 border-md border-right-0">
-                                <i class="fa fa-percent text-muted"></i>
-                            </span>
-                        </div>
-                        <input id="" type="Number" name="mrn" placeholder="Minimum Age" class="form-control bg-white border-left-0 border-md" required>
-                    </div>
-
-                     <div class="input-group col-lg-6 mb-4">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text bg-white px-4 border-md border-right-0">
-                                <i class="fa fa-percent text-muted"></i>
-                            </span>
-                        </div> 
-                        <input id="" type="Number" name="mrn" placeholder="Maximum Age" class="form-control bg-white border-left-0 border-md" required>
-                    </div>
-                    </div>  
-                    </div>
 
                     <!-- Starting Date -->
-                    <div class="input-group ">
-                       <input type="checkbox" name="math" class="form-control">
-                    </div>
-
-                    <!-- Ending Date -->
                     <div class="input-group col-lg-12 mb-4">
+<label class="checkbox-inline ml-2"><input type="checkbox" name="math" value="1">&nbsp;Mathematics</label>
+<label class="checkbox-inline ml-5"><input type="checkbox" name="eng" value="1">&nbsp;English</label>
+</div>  
+
+  <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text bg-white px-4 border-md border-right-0">
-                                <i class="fa fa-calendar text-muted"></i>
+                                <i class="fa fa-male text-muted"></i>
                             </span>
                         </div>
                         
-                        <input id="" type="date" name="edate" placeholder="" class="form-control bg-white border-left-0 border-md" required>
+                        <input id="" type="tel" name="maleHeight" placeholder="Minimum Height for male in meter" class="form-control bg-white border-left-0 border-md" required>
                     </div>
-                    
-                <button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp;Save</button>
+  <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-female text-muted"></i>
+                            </span>
+                        </div>
+                        
+                        <input id="" type="tel" name="femaleHeight" placeholder="Minimum Height for female in meter" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+
+
+                    <!-- Hypertention  -->
+                     <div class="input-group col-lg-12 mb-4">
+<label class="checkbox-inline ml-2"><input type="checkbox" name="hypertension" value="1">&nbsp;Hypertension patients</label>
+</div>  
+                <button type="submit" name="submit" class="btn btn-primary float-right"><i class="fa fa-save"></i>&nbsp;Save</button>
             
             </form>
                   
@@ -153,8 +166,7 @@ swal({
                                 </div>
                             </div>
                         </div>
-                    </div>
-            
+                    </div>     
 </div>
 </section>
 </main>

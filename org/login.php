@@ -26,8 +26,7 @@ swal({
 }, function(){
       window.location.href = "dashboard.php";
 });
-</script>';
-   
+</script>';  
 }
 }else{
     $pass_error='<script>swal("Invalid!", "please input valid Email/password!", "error")</script>';
