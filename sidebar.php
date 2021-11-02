@@ -55,7 +55,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="ask.php">
+                <a class="nav-link" href="myapp.php">
                     <i class="fa fa-fw fa-file"></i>
                     <span>My Application</span></a>
             </li>
@@ -63,21 +63,21 @@
             <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item">
-                <a class="nav-link" href="ask.php">
+                <a class="nav-link" href="profile.php">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Profile</span></a>
             </li>
             <!-- Nav Item - Charts -->
             <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item">
-                <a class="nav-link" href="ask.php">
+                <a class="nav-link" href="setting.php">
                     <i class="fas fa-fw fa-gear"></i>
                     <span>Setting</span></a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
 
              <li class="nav-item">
-                <a class="nav-link" href="myq.php">
+                <a class="nav-link" href="mail.php">
                     <i class="fas fa-fw fa-comment-alt-smile"></i>
                     <span>Mails</span></a>
             </li>

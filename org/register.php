@@ -221,7 +221,7 @@ button{
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" name="submit" class="form-group col-lg-12 mx-auto mb-0 btn btn-primary btn-block py-2">
+                    <button type="submit" name="submit" class="form-group col-lg-12 mx-auto mb-0 btn btn-success btn-block py-2">
                             <span class="font-weight-bold">Create your account</span>
                        
                     </button>
@@ -236,7 +236,7 @@ button{
 
                     <!-- Already Registered -->
                     <div class="text-center w-100">
-                        <p class="text-muted font-weight-bold">Already Registered? <a href="login.php" class="text-primary ml-2">Sign in</a></p>
+                        <p class="text-muted font-weight-bold">Already Registered? <a href="login.php" class="text-success ml-2">Sign in</a></p>
                     </div>
 
                 </div>

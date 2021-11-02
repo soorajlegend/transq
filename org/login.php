@@ -180,7 +180,7 @@ button{
 
 
                     <!-- Submit Button -->
-                    <button type="submit" name="submit" class="form-group col-lg-12 mx-auto mb-0 btn btn-primary btn-block py-2">
+                    <button type="submit" name="submit" class="form-group col-lg-12 mx-auto mb-0 btn btn-success btn-block py-2">
                             <span class="font-weight-bold">Sign in</span>
                         </button>
                     <!-- Divider Text -->
@@ -193,7 +193,7 @@ button{
 
                     <!-- Already Registered -->
                     <div class="text-center w-100">
-                        <p class="text-muted font-weight-bold">Don't have an account? <a href="register.php" class="text-primary ml-2">Sign up</a></p>
+                        <p class="text-muted font-weight-bold">Don't have an account? <a href="register.php" class="text-success ml-2">Sign up</a></p>
                     </div>
 
                 </div>

@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
                 $destination2="./uploads/medical_record/{$basename}";
           move_uploaded_file($temp, $destination);
       
-         $sql = "INSERT INTO app_responds (user_id,app_id,credit,math,eng,credential,height,hypertension,medRecord) VALUES ('$user_id','$app','$credit','$math','$eng','$credential','height','$hypertension','$medRecord')";
+         $sql = "INSERT INTO app_responds (user_id,app_id,credit,math,eng,credential,height,hypertension,medRecord) VALUES ('$user_id','$app','$credit','$math','$eng','$credential','$height','$hypertension','$medRecord')";
             if ($con->query($sql) === true) {
                 $lastid = $con->insert_id;
                 session_start();
@@ -115,7 +115,7 @@ swal({
                 }
                  ?>
             <div class="col-xl-8 col-md-12 mb-8">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -133,7 +133,7 @@ swal({
                             </span>
                         </div>
                         
-                        <input id="" type="Number" name="credit" placeholder="Minimum number of credit Required" class="form-control bg-white border-left-0 border-md" required>
+                        <input id="" type="Number" name="credit" placeholder="Number of credit You have" class="form-control bg-white border-left-0 border-md" required>
                     </div>
 
 
@@ -177,11 +177,11 @@ swal({
 </div>
 </div>
                     
-                <button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp;Send</button>
+                <button type="submit" name="submit" class="btn btn-success"><i class="fa fa-save"></i>&nbsp;Send</button>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                     </div>
                                 </div>

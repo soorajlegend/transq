@@ -75,7 +75,7 @@ swal({
         <section class="clean-block about-us">
             <div class="container">
             <div class="col-xl-6 col-md-12 mb-6">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -136,11 +136,11 @@ swal({
                         <input id="" type="date" name="edate" placeholder="" class="form-control bg-white border-left-0 border-md" required>
                     </div>
                     
-                <button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp;Save</button>
+                <button type="submit" name="submit" class="btn btn-success"><i class="fa fa-save"></i>&nbsp;Save</button>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>

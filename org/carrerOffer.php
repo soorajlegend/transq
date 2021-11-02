@@ -64,7 +64,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
  <div class="container-fluid">
                         <div class="row"> 
     <div class="col-xl-6 col-md-6 mb-6">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -79,11 +79,11 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">Get started</button>
+                <button type="submit" class="btn btn-success">Get started</button>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>
@@ -92,7 +92,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
                         </div>
                     </div>
     <div class="col-xl-6 col-md-6 mb-6">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -107,11 +107,11 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">More details....</button>
+                <button type="submit" class="btn btn-success">More details....</button>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>

@@ -54,7 +54,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
  <div class="container-fluid">
                         <div class="row"> 
                             <div class="col-md-12">
-                            <div class="form-group"><a href="NewApp.php" class="btn btn-primary"><i class="fa fa-plus"> </i>&nbsp;Add Aplication</a></div></div>
+                            <div class="form-group"><a href="NewApp.php" class="btn btn-success"><i class="fa fa-plus"> </i>&nbsp;Add Aplication</a></div></div>
                              <?php 
                              $org_id=$_SESSION['user_id'];
             $sql="SELECT * FROM applications WHERE org_id='$org_id' ORDER BY id DESC";
@@ -70,7 +70,7 @@ foreach($results as $result)
       // $diff = $sdate->diff($edate)->format("%a");
        ?>
     <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -87,7 +87,8 @@ foreach($results as $result)
             <div class="text">Closing Date: <?php echo htmlentities($result->closing_date);?></div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
-                <a href="Setcriterias.php?form=<?php echo $result->id ?>" class="btn btn-primary">Set Criterias</a>
+                <a href="Setcriterias.php?form=<?php echo $result->id ?>" class="btn btn-success">Set Criterias</a>
+                 <a href="QualifiedApp.php?form=<?php echo $result->id ?>" class="btn btn-success float-right">View Qualified App..</a>
             
             </form>
                                     </div>

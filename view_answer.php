@@ -7,6 +7,8 @@ if (strlen($_SESSION['user_id'] == 0)) {
 } elseif ($_SESSION['user_type'] != 3) {
     header("location:logout.php");
 } else {
+
+
     ?>
 <!DOCTYPE html>
 <html>
