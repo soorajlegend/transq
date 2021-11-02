@@ -66,7 +66,7 @@ foreach($results3 as $result3)
           $alert = ' <script>
 swal({
   title: "Sorry!",
-  text: "You are not eligible please, try again next age",
+  text: "You are not eligible please, try again next year",
   type: "error",
   timer: 5000,
   showConfirmButton: false
@@ -78,7 +78,7 @@ swal({
             $alert = ' <script>
 swal({
   title: "Sorry!",
-  text: "You are not eligible please, try again next year credential",
+  text: "You are not eligible please, try again next year ",
   type: "error",
   timer: 5000,
   showConfirmButton: false
@@ -90,7 +90,7 @@ swal({
           $alert = ' <script>
 swal({
   title: "Sorry!",
-  text: "You are not eligible please, try again next year math eng",
+  text: "You are not eligible please, try again next year ",
   type: "error",
   timer: 5000,
   showConfirmButton: false
@@ -98,11 +98,11 @@ swal({
       window.location.href = "myapp.php";
 });
 </script>';         
-            }elseif ($hypertension != $c_hypertension OR $medRecord == "") {
+            }elseif ($c_hypertension != "1" AND $hypertension != $c_hypertension OR $medRecord == "") {
                 $alert = ' <script>
 swal({
   title: "Sorry!",
-  text: "You are not eligible please, try again next year hypertension",
+  text: "You are not eligible please, try again next year ",
   type: "error",
   timer: 5000,
   showConfirmButton: false

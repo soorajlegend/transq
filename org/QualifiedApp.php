@@ -54,7 +54,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
  <div class="container-fluid">
                         <div class="row"> 
                              <div class="col-xl-12 col-md-12 mb-12">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             
 <div class="container mt-3">
   <h2>Qualified Applicants</h2>            
@@ -127,8 +127,9 @@ foreach($results3 as $result3)
             $maleHeight = $result3->maleHeight;
             $female_height = $result3->femaleHeight;
             $c_hypertension = $result3->hypertension;
-            
       }} 
+
+
        if ($age < $minAge OR $age > $maxAge) {
                     break;  
         }elseif ($credit < $c_credit OR $credential == "") {
@@ -137,7 +138,9 @@ foreach($results3 as $result3)
             }elseif ($math !=  $c_math OR $eng != $c_eng) {
                     break;       
         
-            }elseif ($hypertension != $c_hypertension OR $medRecord == "") {
+            }elseif ($c_hypertension == "" AND $hypertension == "1"){
+                     
+            }elseif ($medRecord == "") {
                     break;       
             }elseif ($gender == "male" && $height >= $maleHeight) {
                  ?>

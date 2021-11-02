@@ -81,7 +81,7 @@ foreach($results as $result)
         </div>
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>

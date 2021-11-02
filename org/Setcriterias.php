@@ -81,7 +81,7 @@ swal({
                 }
                  ?>
             <div class="col-xl-8 col-md-12 mb-8">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -127,8 +127,8 @@ swal({
 
                     <!-- Starting Date -->
                     <div class="input-group col-lg-12 mb-4">
-<label class="checkbox-inline ml-2"><input type="checkbox" name="math" value="1">&nbsp;Mathematics</label>
-<label class="checkbox-inline ml-5"><input type="checkbox" name="eng" value="1">&nbsp;English</label>
+<label class="checkbox-inline ml-2"><input type="checkbox" name="math" id="math" value="1" >&nbsp;Mathematics</label>
+<label class="checkbox-inline ml-5"><input type="checkbox" name="eng" id="eng" value="1" >&nbsp;English</label>
 </div>  
 
   <div class="input-group col-lg-12 mb-4">
@@ -155,11 +155,11 @@ swal({
                      <div class="input-group col-lg-12 mb-4">
 <label class="checkbox-inline ml-2"><input type="checkbox" name="hypertension" value="1">&nbsp;Hypertension patients</label>
 </div>  
-                <button type="submit" name="submit" class="btn btn-primary float-right"><i class="fa fa-save"></i>&nbsp;Save</button>
+                <button type="submit" name="submit" class="btn btn-success float-right"><i class="fa fa-save"></i>&nbsp;Save</button>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>
@@ -170,8 +170,12 @@ swal({
 </div>
 </section>
 </main>
+<script type="text/javascript">
+    document.getElementById("math").checked = true;
+    document.getElementById("eng").checked = true;
+</script>
    <?php include 'footer.php'; ?>
 </body>
-
+    
 </html>
 <?php } ?>

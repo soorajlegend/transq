@@ -125,7 +125,7 @@ foreach($results2 as $result2)
           <div class="card-body">
             <h4 class="card-title"><?php echo htmlentities($title);?></h4>
             <p class="card-text"><?php echo htmlentities(substr($desc,0,100)."...");?></p>
-            <a href="viewAppStatus.php?app=<?php echo $result->id ?>" class="btn btn-primary text-light">View status</a>
+            <a href="viewAppStatus.php?app=<?php echo $result->id ?>" class="btn btn-success text-light">View status</a>
           </div>
         </div>
       </div>

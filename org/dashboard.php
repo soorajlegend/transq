@@ -64,7 +64,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
  <div class="container-fluid">
                         <div class="row"> 
     <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -79,11 +79,11 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <a href="recruiting.php" class="btn btn-primary">See more....</a>
+                <a href="recruiting.php" class="btn btn-success">See more....</a>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>
@@ -92,7 +92,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
                         </div>
                     </div>
     <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -107,11 +107,11 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <a href="recruiting.php" class="btn btn-primary">See more....</a>
+                <a href="recruiting.php" class="btn btn-success">See more....</a>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>
@@ -120,12 +120,12 @@ if (strlen($_SESSION['user_id'] == 0)) {
                         </div>
                     </div>
     <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                 <form action="answer.php" method="get">
-            <div class="name"><h3><b>Carrer Offer</b></h3></div>
+            <div class="name"><h3><b>Career Offer</b></h3></div>
             <hr>
             
             <div class="text">Total Number of  short listed officers:</div>
@@ -135,11 +135,11 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <a href="recruiting.php" class="btn btn-primary">See more....</a>
+                <a href="recruiting.php" class="btn btn-success">See more....</a>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>
@@ -148,7 +148,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
                         </div>
                     </div>
     <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -163,11 +163,11 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <a href="recruiting.php" class="btn btn-primary">See more....</a>
+                <a href="recruiting.php" class="btn btn-success">See more....</a>
             
             </form>
                   
-                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
                                     </div>

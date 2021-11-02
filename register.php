@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $gender = $_POST['gender'];
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
-    // $query = "SELECT * FROM users WHERE email='$email' OR phone='$phone'";
+    $query = "SELECT * FROM users WHERE email='$email' OR phone='$phone'";
     $result = mysqli_query($con, $query) or die(mysqli_error($con));
     $count = mysqli_num_rows($result);
     if ($count == 1) {
@@ -259,7 +259,7 @@ input.form-control {
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" name="submit" class="form-group col-lg-12 mx-auto mb-0 btn btn-primary btn-block py-2">
+                    <button type="submit" name="submit" class="form-group col-lg-12 mx-auto mb-0 btn btn-success btn-block py-2">
                             <span class="font-weight-bold">Create your account</span>
                     </button>
 
@@ -273,7 +273,7 @@ input.form-control {
 
                     <!-- Already Registered -->
                     <div class="text-center w-100">
-                        <p class="text-muted font-weight-bold">Already Registered? <a href="login.php" class="text-primary ml-2">Sign in</a></p>
+                        <p class="text-muted font-weight-bold">Already Registered? <a href="login.php" class="text-success ml-2">Sign in</a></p>
                     </div>
 
                 </div>
