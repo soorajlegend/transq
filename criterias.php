@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
                 $destination2="./uploads/medical_record/{$basename}";
           move_uploaded_file($temp, $destination);
       
-         $sql = "INSERT INTO app_responds (user_id,app_id,credit,math,eng,credential,height,hypertension,medRecord) VALUES ('$user_id','$app','$credit','$math','$eng','$credential','height','$hypertension','$medRecord')";
+         $sql = "INSERT INTO app_responds (user_id,app_id,credit,math,eng,credential,height,hypertension,medRecord) VALUES ('$user_id','$app','$credit','$math','$eng','$credential','$height','$hypertension','$medRecord')";
             if ($con->query($sql) === true) {
                 $lastid = $con->insert_id;
                 session_start();
@@ -133,7 +133,7 @@ swal({
                             </span>
                         </div>
                         
-                        <input id="" type="Number" name="credit" placeholder="Minimum number of credit Required" class="form-control bg-white border-left-0 border-md" required>
+                        <input id="" type="Number" name="credit" placeholder="Number of credit You have" class="form-control bg-white border-left-0 border-md" required>
                     </div>
 
 

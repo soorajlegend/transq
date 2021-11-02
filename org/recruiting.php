@@ -88,6 +88,7 @@ foreach($results as $result)
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
                 <a href="Setcriterias.php?form=<?php echo $result->id ?>" class="btn btn-primary">Set Criterias</a>
+                 <a href="QualifiedApp.php?form=<?php echo $result->id ?>" class="btn btn-primary float-right">View Qualified App..</a>
             
             </form>
                                     </div>

@@ -79,7 +79,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">See more....</button>
+                <a href="recruiting.php" class="btn btn-primary">See more....</a>
             
             </form>
                   
@@ -107,7 +107,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">See more....</button>
+                <a href="recruiting.php" class="btn btn-primary">See more....</a>
             
             </form>
                   
@@ -135,7 +135,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">See more....</button>
+                <a href="recruiting.php" class="btn btn-primary">See more....</a>
             
             </form>
                   
@@ -163,7 +163,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-primary">See more....</button>
+                <a href="recruiting.php" class="btn btn-primary">See more....</a>
             
             </form>
                   
