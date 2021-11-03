@@ -64,7 +64,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
                                 <form name="submit" method="post" enctype="multipart/form-data"> 
   <?php
 $adminid=$_SESSION['user_id'];
-$ret=mysqli_query($con,"select * from users where user_id='$adminid'");
+$ret=mysqli_query($con,"select * from users where id='$adminid'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
@@ -75,7 +75,7 @@ while ($row=mysqli_fetch_array($ret)) {
  <fieldset>
   <h5>Your Name                   </h5>
    <div class="form-group">
-   <input class="form-control white_bg" id="name" name="name" value="<?php  echo $row['name'];?>" type="text" required>
+   <input class="form-control white_bg" id="name" name="name" value="<?php  echo $row['fullname'];?>" type="text" required>
     </div>
 </fieldset>
                    

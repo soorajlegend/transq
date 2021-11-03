@@ -28,7 +28,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
@@ -60,6 +60,18 @@
                     <span>My Application</span></a>
             </li>
             <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="Promotion.php">
+                    <i class="fa fa-fw fa-file"></i>
+                    <span>Promotion Offers</span></a>
+            </li>
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="carrerOffer.php">
+                    <i class="fa fa-fw fa-file"></i>
+                    <span>Career Offer</span></a>
+            </li>
+            <!-- Nav Item - Charts -->
             <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item">
@@ -71,7 +83,7 @@
             <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item">
                 <a class="nav-link" href="setting.php">
-                    <i class="fas fa-fw fa-gear"></i>
+                    <i class="fas fa-fw fa-cog"></i>
                     <span>Setting</span></a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">

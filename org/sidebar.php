@@ -28,7 +28,7 @@
         <div id="wrapper">
 
             <!-- Sidebar -->
-            <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul class="navbar-nav bg-gradient-success sidebar  sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
@@ -49,7 +49,9 @@
                 <!-- Divider -->
                 <hr class="sidebar-divider">              
 
-                 <li class="nav-item"> <a class="nav-link" href="recruiting.php"> <i
+                 <li class="nav-item"> <a class="nav-link" href="ranking.php"> <i
+                 class="fas fa-fw fa-arrow-down"></i> <span>Ranking</span></a>
+                 <a class="nav-link" href="recruiting.php"> <i
                  class="fas fa-fw fa-users"></i> <span>Recruiting</span></a>
                  </li> <hr class="sidebar-divider"> <li class="nav-item"> <a
                  class="nav-link" href="promotion.php"> <i class="fas fa-fw

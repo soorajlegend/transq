@@ -37,12 +37,12 @@
 	margin-top: 10px;
 	font-weight: 400;
 	cursor: pointer;
-	color:  #3399ff;
+	color:  #28a745;
 	transform: .5s;
 }
 .nav-menu li:hover{
 	transform: scale(1.0);
-	background-color: #3399ff;
+	background-color: #28a745;
 	color: #fff;
 	 border-radius: 4px;
 }
@@ -67,7 +67,7 @@
 	z-index: 3;
 	margin-top: 100px;
 	padding-left: 20px;
-	color: #3399ff;
+	color: #28a745;
 	font-size: 20pt;
 	word-wrap: break-word;
 	letter-spacing: 0.2px;
@@ -79,7 +79,7 @@
 	transform: scale3d(1.2, 1.1, 1.5);
 }
 .header-content span{
-	color: #3399ff;
+	color: #28a745;
 	margin-left: 20px;
 	font-size: 15pt;
 	letter-spacing: 0.2px;

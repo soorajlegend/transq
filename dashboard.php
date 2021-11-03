@@ -112,7 +112,7 @@ foreach($results as $result)
           <div class="card-body">
             <h4 class="card-title"><?php echo htmlentities($result->title);?></h4>
             <p class="card-text"><?php echo htmlentities(substr($desc,0,100)."...");?></p>
-            <a href="criterias.php?app=<?php echo $result->id ?>" class="btn btn-primary text-light">Apply</a>
+            <a href="criterias.php?app=<?php echo $result->id ?>" class="btn btn-success text-light">Apply</a>
           </div>
         </div>
       </div>

@@ -50,7 +50,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Profile</h6>
+                                    <h6 class="m-0 font-weight-bold text-success">Profile</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,18 +64,18 @@ if (strlen($_SESSION['user_id'] == 0)) {
                                 <form name="submit" method="post" enctype="multipart/form-data"> 
   <?php
 $adminid=$_SESSION['user_id'];
-$ret=mysqli_query($con,"select * from users where user_id='$adminid'");
+$ret=mysqli_query($con,"select * from users where id='$adminid'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
 ?>
        
 <div class="row">
-<div class="col-xl-6 col-lg-12">
+<div class="col-xl-6 col-lg-6">
  <fieldset>
-  <h5>Admin Name                   </h5>
+  <h5>Full Name                   </h5>
    <div class="form-group">
-   <input class="form-control white_bg" id="name" name="name" value="<?php  echo $row['name'];?>" type="text" required>
+   <input class="form-control white_bg" id="name" name="name" value="<?php  echo $row['fullname'];?>" type="text" required>
     </div>
 </fieldset>
                    
@@ -87,7 +87,7 @@ while ($row=mysqli_fetch_array($ret)) {
   <h5>Email Address                 </h5>
    <div class="form-group">
 
-   <input class="form-control white_bg" id="login_id" name="login_id" value="<?php  echo $row['login_id'];?>"  readonly='true' type="text" required>
+   <input class="form-control white_bg" id="login_id" name="login_id" value="<?php  echo $row['email'];?>"  readonly='true' type="text" required>
                           </div>
                         </fieldset>
                       </div>
@@ -114,7 +114,7 @@ while ($row=mysqli_fetch_array($ret)) {
 <button type="submit" name="submit" class="btn btn-success btn-min-width mr-1 mb-1">Update Profile</button>
 </div>
 </div>
-<a href="upass.php">If you want update password click here</a>
+<a href="upass.php" class="text-success">If you want update password click here</a>
                         </div>
                     </div>
                                 </div>
