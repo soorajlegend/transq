@@ -72,10 +72,10 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="name"><h3><b>Recruitments</b></h3></div>
             <hr>
             
-            <div class="text">Total Number of applicant: <?php //echo htmlentities($result->question);?></div>
+            <div class="text">Total Number of applicants: <?php //echo htmlentities($result->question);?></div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
-             <div class="text">TLast Application Date: <?php //echo htmlentities($result->question);?></div>
+             <div class="text">Last Application Date: <?php //echo htmlentities($result->question);?></div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
@@ -128,7 +128,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="name"><h3><b>Career Offer</b></h3></div>
             <hr>
             
-            <div class="text">Total Number of  short listed officers:</div>
+            <div class="text">Total Number of  shortlisted officers:</div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <div class="text">Officers for career offers</div>
@@ -156,10 +156,10 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="name"><h3><b>Settings</b></h3></div>
             <hr>
             
-            <div class="text">Manage your applications and criterias for application</div>
+            <div class="text">Manage your applications and criteria for applications</div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
-            <div class="text">Your last setting date:</div>
+            <div class="text">Previous setting date:</div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">

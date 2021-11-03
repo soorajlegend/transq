@@ -108,7 +108,7 @@ foreach($results as $result)
       <div class="col-md-3" style="float:left">
        <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            src="https://prnigeria.com/wp-content/uploads/sites/30/2014/12/nigeria-police-logo.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title"><?php echo htmlentities($result->title);?></h4>
             <p class="card-text"><?php echo htmlentities(substr($desc,0,100)."...");?></p>
