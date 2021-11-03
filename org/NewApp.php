@@ -99,7 +99,7 @@ swal({
                         <div class="input-group-prepend">
                            
                         </div>
-                        <textarea id="" type="text" name="disc" placeholder="discription" class="form-control bg-white  border-md" required></textarea>
+                        <textarea id="" type="text" name="disc" placeholder="Description" class="form-control bg-white  border-md" required></textarea>
                     </div>
 
 

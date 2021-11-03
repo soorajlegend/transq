@@ -146,9 +146,6 @@ input.form-control {
     <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
             <!-- Navbar Brand -->
-            <a href="#" class="navbar-brand">
-                <img src="assets/img/tranq.png" alt="logo" width="150">
-            </a>
         </div>
     </nav>
 </header>
@@ -158,8 +155,9 @@ input.form-control {
     <div class="row py-5 mt-4 align-items-center">
         <!-- For Demo Purpose -->
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
-            <img src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
-            <h1>Create an Account</h1>
+            <img src="https://ace.globalintegrity.org/wp-content/uploads/2020/09/codes_GIACE-750x375.png" alt="" class="img-fluid mb-3 d-none d-md-block">
+            
+            <h1 class="text-success">Create an Account</h1>
             <p class="font-italic text-muted mb-0">Create account to get access for endless opportunity free of curruption</p>
         </div>
 

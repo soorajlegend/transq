@@ -3,9 +3,9 @@
 session_start();
 include "assets/includes/db_con.php";
 if (strlen($_SESSION['user_id'] == 0)) {
-    header("location:../logout.php");
+    header("location:logout.php");
 }elseif($_SESSION['user_type'] != 3) {
-    header("location:../logout.php");
+    header("location:logout.php");
 }else{
     if(isset($_POST['submit']))
     {
@@ -68,6 +68,17 @@ $ret=mysqli_query($con,"select * from users where id='$adminid'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
+$ret2=mysqli_query($con,"select * from staffs where id='$adminid'");
+while ($row2=mysqli_fetch_array($ret2)) {
+    $ranknum=$row2['rank'];
+}
+
+$ret3=mysqli_query($con,"SELECT * FROM ranks LIMIT ".$ranknum);
+while ($row3=mysqli_fetch_array($ret3)) {
+    $rank=$row3['rank'];
+}
+
+
 ?>
        
 <div class="row">
@@ -97,9 +108,9 @@ while ($row=mysqli_fetch_array($ret)) {
 
 <div class="col-xl-6 col-lg-12">
  <fieldset>
-  <h5>Admin Regestration date           </h5>
+  <h5>Rank</h5>
    <div class="form-group">
-   <input class="form-control white_bg" id="date_reg" name="date_reg" value="<?php  echo $row['date_reg'];?>"  readonly='true' type="text" required>
+   <input class="form-control white_bg" id="date_reg" name="date_reg" value="<?php  echo $rank; ?>"  readonly='true' type="text" required>
     </div>
 </fieldset>
 </div>                

@@ -12,105 +12,90 @@ if (isset($_GET['form'])) {
                     $app = $_GET['form'];
                 }
 
-if (isset($_POST['submit'])) {
-    $sql10 = "SELECT * FROM app_responds WHERE app_id = '$app'";
-    $query10 = $dbh->prepare($sql10);
-    $query10->execute();
-    $results10 = $query10->fetchAll(PDO::FETCH_OBJ);
-    if ($query10->rowCount() > 0) {
-        foreach ($results10 as $result10) {
-            $user = $result10->user_id;
-            $app_id = $result10->app_id;
-            $credit = $result10->credit;
-            $math = $result10->math; 
-            $eng = $result10->eng;
-            $credential = $result10->credential;
-            $height = $result10->height;
-            $hypertension = $result10->hypertension;
-            $medRecord = $result10->medRecord;
 
-             $sql11="SELECT * FROM users WHERE id='$user' ";
-  $query11 = $dbh -> prepare($sql11);
-$query11->execute();
-$results11=$query11->fetchAll(PDO::FETCH_OBJ);
-if($query11->rowCount() > 0)
+if (isset($_POST['submit'])) {      
+               $sql = "SELECT * FROM pro_responds ";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    $results = $query->fetchAll(PDO::FETCH_OBJ);
+    if ($query->rowCount() > 0) {
+        $cnt=1;
+        foreach ($results as $result) {
+            $user = $result->user_id;
+            $org_id = $result->org_id;
+            $yos = $result->yos;
+            $n_ot = $result->n_ot; 
+            $trate = $result->trate;
+            $certificate = $result->certificate;
+            $score = $result->score;
+
+             $sql2="SELECT * FROM staffs WHERE id='$user' ";
+  $query2 = $dbh -> prepare($sql2);
+$query2->execute();
+$results2=$query2->fetchAll(PDO::FETCH_OBJ);
+if($query2->rowCount() > 0)
 {
-foreach($results11 as $result11)
+foreach($results2 as $result2)
 {           
-            $name=$result11->fullname;
-            $email=$result11->email;
+            $rank=$result2->rank;
+}
+}
+
+            $sql2="SELECT * FROM users WHERE id='$user' ";
+  $query2 = $dbh -> prepare($sql2);
+$query2->execute();
+$results2=$query2->fetchAll(PDO::FETCH_OBJ);
+if($query2->rowCount() > 0)
+{
+foreach($results2 as $result2)
+{           
+            $name=$result2->fullname;
+            $email=$result2->email;
             $year=date("Y-m-d");
-            $dob= $result11->dob;
+            $dob= $result2->dob;
             $age = $year - $dob;
-            $gender=$result11->gender;
+            $gender=$result2->gender;
 }
 }
 
 
-$sql12="SELECT * FROM criterias WHERE app_id='$app_id' ";
-  $query12 = $dbh -> prepare($sql12);
-$query12->execute();
-$results12=$query12->fetchAll(PDO::FETCH_OBJ);
-if($query12->rowCount() > 0)
+$sql3="SELECT * FROM procriterias WHERE org_id='$org_id' ";
+  $query3 = $dbh -> prepare($sql3);
+$query3->execute();
+$results3=$query3->fetchAll(PDO::FETCH_OBJ);
+if($query3->rowCount() > 0)
 {
-foreach($results12 as $result12)
+foreach($results3 as $result3)
 {          
             
-            $minAge = $result12->minAge;
-            $maxAge = $result12->maxAge;
-            $c_credit = $result12->credit;
-            $c_math = $result12->math;
-            $c_eng = $result12->eng;
-            $maleHeight = $result12->maleHeight;
-            $female_height = $result12->femaleHeight;
-            $c_hypertension = $result12->hypertension;
-      }} 
-
-      $sql13="SELECT * FROM applications WHERE id='$app_id' ";
-  $query13 = $dbh -> prepare($sql13);
-$query13->execute();
-$results13=$query13->fetchAll(PDO::FETCH_OBJ);
-if($query13->rowCount() > 0)
-{
-foreach($results13 as $result13)
-{          
-            
-            $rank = $result13->rank;
+            $req_yos = $result3->yos;
+            $req_n_ot = $result3->n_ot;
+            $req_trate = $result3->trate;
+            $req_certificate = $result3->certificate;
+            $req_score = $result3->score;
       }} 
 
 
-       if ($age < $minAge OR $age > $maxAge) {
+       if ($yos < $req_yos OR $n_ot < $req_n_ot) {
                     break;  
-        }elseif ($credit < $c_credit OR $credential == "") {
+                    echo "hello";
+        }elseif ($trate < $req_trate OR $certificate == "") {
                     break;       
-        
-            }elseif ($math !=  $c_math OR $eng != $c_eng) {
-                    break;       
-        
-            }elseif ($c_hypertension == "" AND $hypertension == "1"){
-                     break;
-            }elseif ($medRecord == "") {
-                    break;       
-            }elseif ($gender == "male" && $height >= $maleHeight) {
-                // echo "hello";
-              
-              $org_id=$_SESSION['user_id'];
-              $sql13 = "INSERT INTO staffs (id,org_id,rank,status) VALUES ('$user','$org_id','$rank','1')";
-               if ($con->query($sql13) === true) {
+            
+            }elseif ($req_score >= $score ) {
+                   continue;
+            }else{
+                $new_rank = $rank-1;
+              $sql5 = "UPDATE staffs SET rank='$new_rank' WHERE id='$user'";
+               if ($con->query($sql5) === true) {
+
                    } else {
-                echo "error" . $sql13 . $con->error;
+                echo "error" . $sql5 . $con->error;
             }
 
-
-              }elseif($gender == "female" && $height >= $female_height){
-           $org_id=$_SESSION['user_id'];
-              $sql13 = "INSERT INTO staffs (id,org_id,rank,status) VALUES ('$user','$org_id','$rank','1')";
-               if ($con->query($sql13) === true) {
-                   } else {
-                echo "error" . $sql13 . $con->error;
-            }
-     }
-     $alert = ' <script>
+}
+}
+ $alert = ' <script>
 swal({
   title: "Success!",
   text: "Staffs have being save succefully",
@@ -118,14 +103,12 @@ swal({
   timer: 2000,
   showConfirmButton: false
 }, function(){
-      window.location.href = "recruiting.php";
+      window.location.href = "promotion.php";
 });
 </script>';
- }
 
-} 
 }
-
+} 
 ?>
 <!DOCTYPE html>
 <html>
@@ -181,7 +164,7 @@ swal({
         <div class="card border-left-success shadow h-100 py-2">
             
 <div class="container mt-3">
-    <form action="QualifiedApp.php?form=<?php echo $app; ?>" method="post"><button type="submit" name="submit" class="btn btn-success float-right">comfirm</button></form>
+    <form action="proShortlisted.php" method="post"><button type="submit" name="submit" class="btn btn-success float-right">comfirm</button></form>
   <h2>Qualified Applicants</h2>  
   <table class="table table-hover">
     <thead>
@@ -197,7 +180,7 @@ swal({
         <?php 
                  
 
-                  $sql = "SELECT * FROM app_responds WHERE app_id = '$app'";
+                  $sql = "SELECT * FROM pro_responds ";
     $query = $dbh->prepare($sql);
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -205,16 +188,26 @@ swal({
         $cnt=1;
         foreach ($results as $result) {
             $user = $result->user_id;
-            $app_id = $result->app_id;
-            $credit = $result->credit;
-            $math = $result->math; 
-            $eng = $result->eng;
-            $credential = $result->credential;
-            $height = $result->height;
-            $hypertension = $result->hypertension;
-            $medRecord = $result->medRecord;
+            $org_id = $result->org_id;
+            $yos = $result->yos;
+            $n_ot = $result->n_ot; 
+            $trate = $result->trate;
+            $certificate = $result->certificate;
+            $score = $result->score;
 
-             $sql2="SELECT * FROM users WHERE id='$user' ";
+             $sql2="SELECT * FROM staffs WHERE id='$user' ";
+  $query2 = $dbh -> prepare($sql2);
+$query2->execute();
+$results2=$query2->fetchAll(PDO::FETCH_OBJ);
+if($query2->rowCount() > 0)
+{
+foreach($results2 as $result2)
+{           
+            $rank=$result2->rank;
+}
+}
+
+            $sql2="SELECT * FROM users WHERE id='$user' ";
   $query2 = $dbh -> prepare($sql2);
 $query2->execute();
 $results2=$query2->fetchAll(PDO::FETCH_OBJ);
@@ -232,7 +225,7 @@ foreach($results2 as $result2)
 }
 
 
-$sql3="SELECT * FROM criterias WHERE app_id='$app_id' ";
+$sql3="SELECT * FROM procriterias WHERE org_id='$org_id' ";
   $query3 = $dbh -> prepare($sql3);
 $query3->execute();
 $results3=$query3->fetchAll(PDO::FETCH_OBJ);
@@ -241,30 +234,24 @@ if($query3->rowCount() > 0)
 foreach($results3 as $result3)
 {          
             
-            $minAge = $result3->minAge;
-            $maxAge = $result3->maxAge;
-            $c_credit = $result3->credit;
-            $c_math = $result3->math;
-            $c_eng = $result3->eng;
-            $maleHeight = $result3->maleHeight;
-            $female_height = $result3->femaleHeight;
-            $c_hypertension = $result3->hypertension;
+            $req_yos = $result3->yos;
+            $req_n_ot = $result3->n_ot;
+            $req_trate = $result3->trate;
+            $req_certificate = $result3->certificate;
+            $req_score = $result3->score;
       }} 
 
 
-       if ($age < $minAge OR $age > $maxAge) {
+       if ($yos < $req_yos OR $n_ot < $req_n_ot) {
                     break;  
-        }elseif ($credit < $c_credit OR $credential == "") {
+                    echo "hello";
+        }elseif ($trate < $req_trate OR $certificate == "") {
                     break;       
+            
+            }elseif ($req_score >= $score ) {
+                   continue;
         
-            }elseif ($math !=  $c_math OR $eng != $c_eng) {
-                    break;       
-        
-            }elseif ($c_hypertension == "" AND $hypertension == "1"){
-                     break;
-            }elseif ($medRecord == "") {
-                    break;       
-            }elseif ($gender == "male" && $height >= $maleHeight) {
+            }else{
                  ?>
         <tr>
         <td><?php echo htmlentities($cnt);?></td>
@@ -274,19 +261,8 @@ foreach($results3 as $result3)
         <td><?php echo htmlentities($gender);?></td>
 
         </tr>
-
-        <?php }elseif($gender == "female" && $height >= $female_height){
-            ?>
- <tr>
-        <td><?php echo htmlentities($cnt);?></td>
-        <td><?php echo htmlentities($name);?></td>
-        <td><?php echo htmlentities($email);?></td>
-        <td><?php echo htmlentities($age." years");?></td>
-        <td><?php echo htmlentities($gender);?></td>
-
-        </tr>
   <?php
- }
+}
     $cnt++; }
 } ?>
     </tbody>

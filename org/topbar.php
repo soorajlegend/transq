@@ -71,7 +71,7 @@ $name=$row['name'];
 ?>
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $name; ?></span>
                                 <img class="img-profile rounded-circle"
-                                    src="../admin/img/undraw_profile.svg">
+                                    src="https://prnigeria.com/wp-content/uploads/sites/30/2014/12/nigeria-police-logo.jpg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

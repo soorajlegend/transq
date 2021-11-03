@@ -33,7 +33,7 @@
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
                     
-                    <div class="sidebar-brand-text mx-3">TransQ</div>
+                    <div class="sidebar-brand-text mx-3"><img src="../assets/img/tranq2.png" width="150"></div>
                 </a>
 
                 <!-- Divider -->
@@ -58,13 +58,13 @@
                  fa-arrow-up"></i> <span>Promotion</span></a> </li> <hr
                  class="sidebar-divider"> <li class="nav-item"> <a
                  class="nav-link" href="carrerOffer.php"> <i class="fa fa-fw
-                 fa-handshake"></i> <span>Carrer Offers</span></a> </li><hr
+                 fa-handshake"></i> <span>Career Offers</span></a> </li><hr
                  class="sidebar-divider"> <li class="nav-item"><a
                  class="nav-link" href="ourApplication.php"> <i class="fa fa-fw
                  fa-file"></i> <span>Our Applications</span></a> </li><hr
                  class="sidebar-divider"> <li class="nav-item"> <a
                  class="nav-link" href="settings.php"> <i class="fa fa-fw
-                 fa-cog"></i> <span>Setting</span></a> </li>
+                 fa-cog"></i> <span>Settings</span></a> </li>
 
                 <!-- Nav Item - Tables -->
                
