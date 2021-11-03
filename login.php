@@ -144,7 +144,6 @@ button{
         <div class="container">
             <!-- Navbar Brand -->
             <a href="#" class="navbar-brand">
-                <img src="assets/img/tranq.png" alt="logo" width="150">
             </a>
         </div>
     </nav>

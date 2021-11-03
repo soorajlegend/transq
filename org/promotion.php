@@ -14,7 +14,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
 <head>
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - soo'al</title>
+    <title>Dashboard - NRP</title>
     <meta name="description" content="A platform that people can ask islamic question and get its answer from assigned ulamaa.">
     <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/logo.jpg">
     <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/slogo.jpg">
@@ -79,7 +79,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">Get started</button>
+                <a  href="procriterias.php" type="submit" class="btn btn-success">Get started</a>
             
             </form>
                   
@@ -107,7 +107,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">More details....</button>
+                <a  href="proShortlisted.php" type="submit" class="btn btn-success">Get started</a>
             
             </form>
                   

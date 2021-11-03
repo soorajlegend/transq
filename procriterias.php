@@ -14,7 +14,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
 <head>
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - soo'al</title>
+    <title>Dashboard - NRP</title>
     <meta name="description" content="A platform that people can ask islamic question and get its answer from assigned ulamaa.">
     <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/logo.jpg">
     <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/slogo.jpg">
@@ -63,121 +63,85 @@ if (strlen($_SESSION['user_id'] == 0)) {
 // {               ?>  
  <div class="container-fluid">
                         <div class="row"> 
-    <div class="col-xl-4 col-md-6 mb-4">
+    <div class="col-xl-8 col-md-8 mb-8">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Recruitments</b></h3></div>
+                <form action="procriterias.php" method="post" enctype="multipart/form-data">
+            <div class="name"><h3><b>Set Criterias</b></h3></div>
             <hr>
             
-            <div class="text">Total Number of applicant: <?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-             <div class="text">TLast Application Date: <?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">See more....</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
+            <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-calendar text-muted"></i>
+                            </span>
                         </div>
+                        
+                        <input id="" type="Number" name="yos" placeholder="years of service" class="form-control bg-white border-left-0 border-md" required>
                     </div>
-    <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Promotion</b></h3></div>
-            <hr>
-            
-            <div class="text">Total Number of officers:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <div class="text">Number of officers to promote:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">See more....</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Carrer Offer</b></h3></div>
-            <hr>
-            
-            <div class="text">Total Number of Officers that get offers:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <div class="text">Officers that deserve offers:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">See more....</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Settings</b></h3></div>
-            <hr>
-            
-            <div class="text">Manage your applications and criterias</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <div class="text">Your last setting date:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">See more....</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+
+            <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-list-ol text-muted"></i>
+                            </span>
+                        </div>
+                        
+                        <input id="" type="Number" name="n_tr" placeholder="Number of training completed" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+
+
+            <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-star text-muted"></i>
+                            </span>
+                        </div>
+                        
+                        <input id="" type="Number" name="trates" placeholder="Training rates (0-10)" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+
+
+            <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-certificate text-muted"></i>
+                            </span>
+                        </div>
+                        
+            <div class="custom-file">
+  <input type="file" class="form-control" name="certificate" id="customFile">
+  <label class="custom-file-label" for="customFile">Upload your certificate in <body>PDF</body> format</label>
+</div>
+                    </div>
+
+
+                     <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-percent text-muted"></i>
+                            </span>
+                        </div>
+                        
+                        <input id="" type="Number" name="credit" placeholder="Score of promotional exam" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+
+
+                <a  href="procriterias.php" type="submit" class="btn btn-success"><i class="fa fa-save"></i>&nbsp;Save</a>
+            
+            </form>
+                  
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
 
 <?php //}} ?> 
     

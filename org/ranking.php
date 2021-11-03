@@ -7,6 +7,53 @@ if (strlen($_SESSION['user_id'] == 0)) {
 } elseif ($_SESSION['user_type'] != 1) {
     header("location:logout.php");
 } else {
+ 
+
+ $alert="";
+
+if (isset($_GET['del'])) {
+    $rank = $_GET['del'];
+    $sql3 = "DELETE FROM ranks WHERE id='$rank'";
+            if ($con->query($sql3) === true) {
+                $alert = '<script>
+swal({
+  title: "Success!",
+  text: "Rank has been deleted successfully",
+  type: "success",
+  timer: 2000,
+  showConfirmButton: false
+}, function(){
+      window.location.href = "ranking.php";
+});
+</script>';
+}else {
+                echo "error" . $sql3 . $con->error;
+            }
+}
+
+
+    if (isset($_POST['add'])) {
+        $rank = $_POST['rank'];
+        $org_id = $_SESSION['user_id'];
+        $sql = "INSERT INTO ranks (org_id,rank) VALUES ('$org_id','$rank')";
+            if ($con->query($sql) === true) {
+                $lastid = $con->insert_id;
+                session_start();
+                $alert = ' <script>
+swal({
+  title: "Success!",
+  text: "Good",
+  type: "success",
+  timer: 2000,
+  showConfirmButton: false
+}, function(){
+      window.location.href = "ranking.php";
+});
+</script>';
+            } else {
+                echo "error" . $sql . $con->error;
+            }
+    }
     ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +61,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
 <head>
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - soo'al</title>
+    <title>Dashboard - NRP</title>
     <meta name="description" content="A platform that people can ask islamic question and get its answer from assigned ulamaa.">
     <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/logo.jpg">
     <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/slogo.jpg">
@@ -24,13 +71,59 @@ if (strlen($_SESSION['user_id'] == 0)) {
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <script src="https://use.fontawesome.com/5c83a5112a.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+   <style type="text/css">
+        ::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #525965;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #525965;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #525965;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+       .ranks{
+        max-height: 500px;
+        overflow: auto;
+        overflow-x: scroll;
+       }
+
+ </style>
    
 </head>
 
 <body>
    <?php include 'sidebar.php'; ?>
    <?php include 'topbar.php'; ?>
+   <?php echo $alert; ?>
     <main class="page">
         <section class="clean-block about-us">
             <div class="container">
@@ -63,26 +156,28 @@ if (strlen($_SESSION['user_id'] == 0)) {
 // {               ?>  
  <div class="container-fluid">
                         <div class="row"> 
-    <div class="col-xl-4 col-md-6 mb-4">
+    <div class="col-xl-6 col-md-6 mb-6">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Recruitments</b></h3></div>
+                <form action="ranking.php" method="post">
+            <div class="name"><h3><b>Ranking</b></h3></div>
             <hr>
             
-            <div class="text">Total Number of applicant: <?php //echo htmlentities($result->question);?></div>
+            <div class="text">Please add your ranks from the highest to the lowest<?php //echo htmlentities($result->question);?></div>
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-             <div class="text">TLast Application Date: <?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">See more....</button>
-            
-            </form>
-                  
+            <hr><div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-arrows-v text-muted"></i>
+                            </span>
+                        </div>
+                        
+                        <input id="" type="text" name="rank" placeholder="Rank Title" class="form-control bg-white border-left-0 border-md" required>
+                    </div>
+                <button type="submit" name="add" class="btn btn-success"><i class="fa fa-plus"></i>&nbsp;Add</a>
+            </form>                  
                  <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         </div>
                                        
@@ -91,93 +186,59 @@ if (strlen($_SESSION['user_id'] == 0)) {
                             </div>
                         </div>
                     </div>
-    <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
+    <div class="col-xl-6 col-md-6 mb-6 ranks">
+        <div class="card border-left-success shadow h-100 py-2 ranks">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Promotion</b></h3></div>
-            <hr>
-            
-            <div class="text">Total Number of officers:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <div class="text">Number of officers to promote:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">See more....</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Carrer Offer</b></h3></div>
-            <hr>
-            
-            <div class="text">Total Number of Officers that get offers:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <div class="text">Officers that deserve offers:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">See more....</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Settings</b></h3></div>
-            <hr>
-            
-            <div class="text">Manage your applications and criterias</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <div class="text">Your last setting date:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">See more....</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <form action="answer.php" method="post">
+            <div class="name"><h3><b>Rank List</b></h3></div>
+            <div class="container mt-3">          
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Rank</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php 
+           $org_id = $_SESSION['user_id'];
+           $sql2 = "SELECT * FROM ranks WHERE org_id='$org_id'";
+    $query2 = $dbh->prepare($sql2);
+    $query2->execute();
+    $results2 = $query2->fetchAll(PDO::FETCH_OBJ);
+    if ($query2->rowCount() > 0) {
+        $cnt=1;
+        foreach ($results2 as $result2) {
+         ?>
+      <tr>
+        <td><?php echo htmlentities($cnt); ?></td>
+        <td><?php echo htmlentities($result2->rank); ?></td>
+        <td><a href="ranking.php?del=<?php echo htmlentities($result2->id); ?> " class="btn btn-danger"><i class="fa fa-delete"></i>&nbsp;Delete</a></td>
+      </tr>
+<?php 
+$cnt++;
+}
 
+}
+ ?>
+     </tbody>
+  </table>
+</div>
+
+            </form>
+                  
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
 
 <?php //}} ?> 
     
