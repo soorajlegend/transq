@@ -7,6 +7,37 @@ if (strlen($_SESSION['user_id'] == 0)) {
 } elseif ($_SESSION['user_type'] != 1) {
     header("location:logout.php");
 } else {
+
+
+$alert="";
+$org_id=$_SESSION['user_id'];
+
+if (isset($_POST['submit'])) {
+
+    $shootingCertificate = $_POST['shootingCertificate'];
+    $otherCertificate = $_POST['otherCertificate'];
+    $rank = $_POST['rank'];
+
+            $sql = "INSERT INTO careerCriterias (org_id,shootingCertificate,otherCertificate,rank) VALUES ('$org_id','$shootingCertificate','$otherCertificate','$rank')";
+            if ($con->query($sql) === true) {
+                $lastid = $con->insert_id;
+                $alert = ' <script>
+swal({
+  title: "Success!",
+  text: "Good",
+  type: "success",
+  timer: 2000,
+  showConfirmButton: false
+}, function(){
+      window.location.href = "carrerOffer.php";
+});
+</script>';
+            } else {
+                echo "error" . $sql . $con->error;
+            }
+
+        }
+ 
     ?>
 <!DOCTYPE html>
 <html>
@@ -24,13 +55,16 @@ if (strlen($_SESSION['user_id'] == 0)) {
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <script src="https://use.fontawesome.com/5c83a5112a.js"></script>
-
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
 </head>
 
 <body>
    <?php include 'sidebar.php'; ?>
    <?php include 'topbar.php'; ?>
+   <?php echo $alert; ?>
     <main class="page">
         <section class="clean-block about-us">
             <div class="container">
@@ -63,63 +97,65 @@ if (strlen($_SESSION['user_id'] == 0)) {
 // {               ?>  
  <div class="container-fluid">
                         <div class="row"> 
-    <div class="col-xl-6 col-md-6 mb-6">
+    <div class="col-xl-8 col-md-8 mb-8">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                <form action="answer.php" method="get">
+                <form action="careerCriterias.php" method="post">
             <div class="name"><h3><b>Set Criterias</b></h3></div>
             <hr>
-            
-            <div class="text">All staffs will be automatically offers a career base on these criterias<?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-             <div class="text">Last setup date: <?php //echo htmlentities($result->question);?></div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <a  href="careerCriterias.php" type="submit" class="btn btn-success">Get started</a>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    <div class="col-xl-6 col-md-6 mb-6">
-        <div class="card border-left-success shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                <form action="answer.php" method="get">
-            <div class="name"><h3><b>Career offer short listed</b></h3></div>
-            <hr>
-            
-            <div class="text">Total number of short listed staffs:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <div class="text">Officers for career offers:</div>
-            <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
-            <hr>
-            <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">More details....</button>
-            
-            </form>
-                  
-                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
     
+            <div class="input-group col-lg-12 ">                        
+                         <div class="input-group col-lg-12 mb-4">
+<label class="checkbox-inline ml-2"><input type="checkbox" name="shootingCertificate" id="math" value="1" >&nbsp;Certificate in Shooting Range</label>
+</div>
+                    </div>
+                    <div class="input-group col-lg-12 ">                        
+                         <div class="input-group col-lg-12 mb-4">
+<label class="checkbox-inline ml-2"><input type="checkbox" name="otherCertificate" id="math" value="1" >&nbsp; Any other certificate</label>
+</div>
+                    </div>
+
+
+                     <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-arrows-v text-muted"></i>
+                            </span>
+                        </div>
+                       
+                        <select id="" type="Text" name="rank" class="form-control bg-white border-left-0 border-md" required>
+                            <?php 
+                          $org_id = $_SESSION['user_id'];
+           $sql2 = "SELECT * FROM ranks WHERE org_id='$org_id'";
+    $query2 = $dbh->prepare($sql2);
+    $query2->execute();
+    $results2 = $query2->fetchAll(PDO::FETCH_OBJ);
+    if ($query2->rowCount() > 0) {
+        $cnt=1;
+        foreach ($results2 as $result2) {
+         ?>  
+<option value="<?php echo htmlentities($result2->rank);?>"><?php echo htmlentities($result2->rank);?></option>
+ <?php }} ?>
+                            <option selected disabled>Rank</option>
+                        </select>
+                    </div>
+
+
+
+                <button type="submit" name="submit" class="btn btn-success"><i class="fa fa-save"></i>&nbsp;Save</button>
+            
+            </form>
+                  
+                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
 
 <?php //}} ?> 
     
