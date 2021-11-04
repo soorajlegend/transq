@@ -47,7 +47,7 @@ swal({
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login - Soo'al</title>
+    <title>Login - NRP</title>
     <meta name="description" content="A platform that people can ask islamic question and get its answer from assigned ulamaa.">
     <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/logo.jpg">
     <link rel="icon" type="image/jpeg" sizes="undefinedxundefined" href="assets/img/logo.jpg">

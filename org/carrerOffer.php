@@ -107,7 +107,7 @@ if (strlen($_SESSION['user_id'] == 0)) {
             <div class="date"><?php //echo htmlentities($result->date_ask);?></div>
             <hr>
             <input type="hidden" name="q_id" value="<?php //echo htmlentities($result->q_id); ?>">
-                <button type="submit" class="btn btn-success">More details....</button>
+                <a  href="OfferShortListed.php" type="submit" class="btn btn-success">Get started</a>
             
             </form>
                   
