@@ -8,107 +8,8 @@ if (strlen($_SESSION['user_id'] == 0)) {
     header("location:logout.php");
 } else {
 $alert="";
-if (isset($_GET['form'])) {
-                    $app = $_GET['form'];
-                }
+$org_id=$_SESSION['user_id'];
 
-
-if (isset($_POST['submit'])) {      
-               $sql = "SELECT * FROM pro_responds ";
-    $query = $dbh->prepare($sql);
-    $query->execute();
-    $results = $query->fetchAll(PDO::FETCH_OBJ);
-    if ($query->rowCount() > 0) {
-        $cnt=1;
-        foreach ($results as $result) {
-            $user = $result->user_id;
-            $org_id = $result->org_id;
-            $yos = $result->yos;
-            $n_ot = $result->n_ot; 
-            $trate = $result->trate;
-            $certificate = $result->certificate;
-            $score = $result->score;
-
-             $sql2="SELECT * FROM staffs WHERE id='$user' ";
-  $query2 = $dbh -> prepare($sql2);
-$query2->execute();
-$results2=$query2->fetchAll(PDO::FETCH_OBJ);
-if($query2->rowCount() > 0)
-{
-foreach($results2 as $result2)
-{           
-            $rank=$result2->rank;
-}
-}
-
-            $sql2="SELECT * FROM users WHERE id='$user' ";
-  $query2 = $dbh -> prepare($sql2);
-$query2->execute();
-$results2=$query2->fetchAll(PDO::FETCH_OBJ);
-if($query2->rowCount() > 0)
-{
-foreach($results2 as $result2)
-{           
-            $name=$result2->fullname;
-            $email=$result2->email;
-            $year=date("Y-m-d");
-            $dob= $result2->dob;
-            $age = $year - $dob;
-            $gender=$result2->gender;
-}
-}
-
-
-$sql3="SELECT * FROM procriterias WHERE org_id='$org_id' ";
-  $query3 = $dbh -> prepare($sql3);
-$query3->execute();
-$results3=$query3->fetchAll(PDO::FETCH_OBJ);
-if($query3->rowCount() > 0)
-{
-foreach($results3 as $result3)
-{          
-            
-            $req_yos = $result3->yos;
-            $req_n_ot = $result3->n_ot;
-            $req_trate = $result3->trate;
-            $req_certificate = $result3->certificate;
-            $req_score = $result3->score;
-      }} 
-
-
-       if ($yos < $req_yos OR $n_ot < $req_n_ot) {
-                    break;  
-                    echo "hello";
-        }elseif ($trate < $req_trate OR $certificate == "") {
-                    break;       
-            
-            }elseif ($req_score >= $score ) {
-                   continue;
-            }else{
-                $new_rank = $rank-1;
-              $sql5 = "UPDATE staffs SET rank='$new_rank' WHERE id='$user'";
-               if ($con->query($sql5) === true) {
-
-                   } else {
-                echo "error" . $sql5 . $con->error;
-            }
-
-}
-}
- $alert = ' <script>
-swal({
-  title: "Success!",
-  text: "Staffs have being save succefully",
-  type: "success",
-  timer: 2000,
-  showConfirmButton: false
-}, function(){
-      window.location.href = "promotion.php";
-});
-</script>';
-
-}
-} 
 ?>
 <!DOCTYPE html>
 <html>
@@ -178,79 +79,70 @@ swal({
     </thead>
     <tbody>
         <?php 
+                     
+                    $sql = "SELECT * FROM careerResponds WHERE org_id='$org_id'";
+         $query = $dbh->prepare($sql);
+         $query->execute();
+         $results = $query->fetchAll(PDO::FETCH_OBJ);
+         if ($query->rowCount() > 0) {
+             $cnt=1;
+             foreach ($results as $result) {
+                 $user=$result->user_id;
+                 $shootingCertificate = $result->shootingCertificate;
+                 $otherCertificate = $result->otherCertificate;
+     
+     
+                 $sql2="SELECT * FROM users WHERE id='$user' ";
+       $query2 = $dbh -> prepare($sql2);
+     $query2->execute();
+     $results2=$query2->fetchAll(PDO::FETCH_OBJ);
+     if($query2->rowCount() > 0)
+     {
+     foreach($results2 as $result2)
+     {           
+                 $name=$result2->fullname;
+                 $email=$result2->email;
+                 $year=date("Y-m-d");
+                 $dob= $result2->dob;
+                 $age = $year - $dob;
+                 $gender=$result2->gender;
+     }
+     }
+
+     $sql6="SELECT * FROM staffs WHERE id='$user' ";
+       $query6 = $dbh -> prepare($sql6);
+     $query6->execute();
+     $results6=$query6->fetchAll(PDO::FETCH_OBJ);
+     if($query6->rowCount() > 0)
+     {
+     foreach($results6 as $result6)
+     {           
+                 $rank=$result6->rank;
+     }
+     }
+     
+     
+     
+     $sql3="SELECT * FROM careerCriterias WHERE org_id='$org_id' ";
+       $query3 = $dbh -> prepare($sql3);
+     $query3->execute();
+     $results3=$query3->fetchAll(PDO::FETCH_OBJ);
+     if($query3->rowCount() > 0)
+     {
+     foreach($results3 as $result3)
+     {          
                  
-
-                  $sql = "SELECT * FROM pro_responds ";
-    $query = $dbh->prepare($sql);
-    $query->execute();
-    $results = $query->fetchAll(PDO::FETCH_OBJ);
-    if ($query->rowCount() > 0) {
-        $cnt=1;
-        foreach ($results as $result) {
-            $user = $result->user_id;
-            $org_id = $result->org_id;
-            $yos = $result->yos;
-            $n_ot = $result->n_ot; 
-            $trate = $result->trate;
-            $certificate = $result->certificate;
-            $score = $result->score;
-
-             $sql2="SELECT * FROM staffs WHERE id='$user' ";
-  $query2 = $dbh -> prepare($sql2);
-$query2->execute();
-$results2=$query2->fetchAll(PDO::FETCH_OBJ);
-if($query2->rowCount() > 0)
-{
-foreach($results2 as $result2)
-{           
-            $rank=$result2->rank;
-}
-}
-
-            $sql2="SELECT * FROM users WHERE id='$user' ";
-  $query2 = $dbh -> prepare($sql2);
-$query2->execute();
-$results2=$query2->fetchAll(PDO::FETCH_OBJ);
-if($query2->rowCount() > 0)
-{
-foreach($results2 as $result2)
-{           
-            $name=$result2->fullname;
-            $email=$result2->email;
-            $year=date("Y-m-d");
-            $dob= $result2->dob;
-            $age = $year - $dob;
-            $gender=$result2->gender;
-}
-}
-
-
-$sql3="SELECT * FROM procriterias WHERE org_id='$org_id' ";
-  $query3 = $dbh -> prepare($sql3);
-$query3->execute();
-$results3=$query3->fetchAll(PDO::FETCH_OBJ);
-if($query3->rowCount() > 0)
-{
-foreach($results3 as $result3)
-{          
-            
-            $req_yos = $result3->yos;
-            $req_n_ot = $result3->n_ot;
-            $req_trate = $result3->trate;
-            $req_certificate = $result3->certificate;
-            $req_score = $result3->score;
-      }} 
-
-
-       if ($yos < $req_yos OR $n_ot < $req_n_ot) {
-                    break;  
-        }elseif ($trate < $req_trate OR $certificate == "") {
-                    break;       
-            
-            }elseif ($req_score >= $score ) {
-                   continue;
+                 $req_shootingCertificate = $result3->shootingCertificate;
+                 $req_otherCertificate = $result3->otherCertificate;
+                 $req_rank = $result3->rank;
+           }} 
         
-            }else{
+     
+            if ($shootingCertificate == "" OR $otherCertificate == "") {
+                         break;  
+             }elseif ($rank != $req_rank) {
+                    continue;
+                }else{
                  ?>
         <tr>
         <td><?php echo htmlentities($cnt);?></td>
@@ -260,10 +152,10 @@ foreach($results3 as $result3)
         <td><?php echo htmlentities($gender);?></td>
 
         </tr>
-  <?php
-}
+  <?php     
+            }
+
     $cnt++; }
-}
 } ?>
     </tbody>
   </table>

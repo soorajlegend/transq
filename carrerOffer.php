@@ -8,59 +8,44 @@ if (strlen($_SESSION['user_id'] == 0)) {
     header("location:logout.php");
 } else {
 $alert="";
-$user_id =$_SESSION['user_id'];
-$cert="NRP_CERT";
-
+$user_id=$_SESSION['user_id'];
+$cred="NRP_SHOOTING";
+$med="NRP_OTHER";
 if (isset($_POST['submit'])) {
-    $shoot=$_SESSION['shoot'];
-    $other=$_POST['other'];
-    $rank = $_POST['rank'];
-    $shoot = $_FILES["shoot"]["name"];
-        $type = $_FILES["shoot"]["type"];
-        $size = $_FILES["shoot"]["size"];
-        $temp = $_FILES["shoot"]["tmp_name"];
-        $error = $_FILES["shoot"]["error"];
-    $other = $_FILES["other"]["name"];
-        $medtype = $_FILES["other"]["type"];
-        $medsize = $_FILES["other"]["size"];
-        $medtemp = $_FILES["other"]["tmp_name"];
-        $mederror = $_FILES["other"]["error"];
-
+    $rank=$_POST['rank'];
+    $credential = $_FILES["credential"]["name"];
+        $type = $_FILES["credential"]["type"];
+        $size = $_FILES["credential"]["size"];
+        $temp = $_FILES["credential"]["tmp_name"];
+        $error = $_FILES["credential"]["error"];
+    $medRecord = $_FILES["medRecord"]["name"];
+        $medtype = $_FILES["medRecord"]["type"];
+        $medsize = $_FILES["medRecord"]["size"];
+        $medtemp = $_FILES["medRecord"]["tmp_name"];
+        $mederror = $_FILES["medRecord"]["error"];
+      
         if ($error > 0){
           die("Error uploading file! Code $error.");
           }
         else{
-
-            if ($mederror > 0){
+                if ($mederror > 0){
           die("Error uploading medical record! Code $error.");
           }
         else{
             
                 $filename= $cred.uniqid()."_".time();
-                $extension=pathinfo($_FILES['shoot']['name'], PATHINFO_EXTENSION );
+                $extension=pathinfo($_FILES['credential']['name'], PATHINFO_EXTENSION );
                 $basename=$filename.".".$extension;
                 $destination="./uploads/credentials/{$basename}";
           move_uploaded_file($temp, $destination);
 
-          $filename2= $med.uniqid()."_".time();
-                $extension2=pathinfo($_FILES['other']['name'], PATHINFO_EXTENSION );
+                $filename2= $med.uniqid()."_".time();
+                $extension2=pathinfo($_FILES['medRecord']['name'], PATHINFO_EXTENSION );
                 $basename2=$filename2.".".$extension2;
                 $destination2="./uploads/medical_record/{$basename2}";
           move_uploaded_file($temp, $destination);
-
-
-         $sql3="SELECT * FROM staffs WHERE id='$user_id' ";
-  $query3 = $dbh -> prepare($sql3);
-$query3->execute();
-$results3=$query3->fetchAll(PDO::FETCH_OBJ);
-if($query3->rowCount() > 0)
-{
-foreach($results3 as $result3)
-{          
-            
-            $org_id = $result3->org_id;
-      } 
-         $sql = "INSERT INTO careerResponds (user_id,shootCertificate,otherCertificate,rank) VALUES ('$user_id','$shoot','$other','$rank')";
+      
+         $sql = "INSERT INTO careerResponds (user_id,shootingCertificate,otherCertificate,rank) VALUES ('$user_id','$basename','$basename2','$rank')";
             if ($con->query($sql) === true) {
                 $lastid = $con->insert_id;
                 session_start();
@@ -79,22 +64,11 @@ swal({
                 echo "error" . $sql . $con->error;
             }
 
-        }else{
-            $alert = ' <script>
-swal({
-  title: "Success!",
-  text: "You are not a staff of any organisation",
-  type: "error",
-  timer: 2000,
-  showConfirmButton: false
-}, function(){
-      window.location.href = "dashboard.php";
-});
-</script>';
         }
-    }
  
-   }
+}
+   
+
 }
    
     ?>
@@ -126,18 +100,23 @@ swal({
 <body>
    <?php include 'sidebar.php'; ?>
    <?php include 'topbar.php'; ?>
-   <?php echo $alert; ?>
     <main class="page">
         <section class="clean-block about-us">
             <div class="container">
-              
+                <?php 
+                if (isset($_GET['app'])) {
+                    $app = $_GET['app'];
+                }
+                echo $alert;
+                 ?>
             <div class="col-xl-8 col-md-12 mb-8">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                 <form action="carrerOffer.php" method="post" enctype="multipart/form-data" >
-            <div class="name"><h3><b>Apply</b></h3></div>
+            <a href="OfferStatus.php" class="btn btn-success float-right">Check Status</a>
+                <div class="name"><h3><b>Apply</b></h3></div>
             <hr>
             <div class="input-group col-lg-12 mb-4">
                         <div class="input-group-prepend">
@@ -147,7 +126,7 @@ swal({
                         </div>
                         
             <div class="custom-file">
-  <input type="file" class="form-control" name="shoot" id="customFile">
+  <input type="file" class="form-control" name="credential" id="customFile">
   <label class="custom-file-label" for="customFile">Upload your shooting range certificate in <body>PDF</body> format</label>
 </div>
                     </div>
@@ -161,8 +140,8 @@ swal({
                         </div>
                         
             <div class="custom-file">
-  <input type="file" class="form-control" name="other" id="customFile">
-  <label class="custom-file-label" for="customFile">Upload any other related certificate in <body>PDF</body> format</label>
+  <input type="file" class="form-control" name="medRecord" id="customFile2">
+  <label class="custom-file-label" for="customFile2">Upload any other related certificate in <body>PDF</body> format</label>
 </div>
                     </div>
  <?php

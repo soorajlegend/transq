@@ -7,21 +7,21 @@ if (strlen($_SESSION['user_id'] == 0)) {
 }elseif($_SESSION['user_type'] != 3) {
     header("location:logout.php");
 }else{
-    if(isset($_POST['submit']))
-    {
-      $adminid=$_SESSION['user_id'];
-      $name=$_POST['name'];
+    // if(isset($_POST['submit']))
+    // {
+    //   $adminid=$_SESSION['user_id'];
+    //   $name=$_POST['name'];
     
     
-       $query=mysqli_query($con, "update users set name ='$name' where user_id='$adminid'");
-      if ($query) {
-      echo "<script>alert('Your profile has been updated.')</script>";
-    }
-    else
-      {
-        echo "<script>alert('Something Went Wrong. Please try again.')</script>";
-      }
-    }
+    //    $query=mysqli_query($con, "update users set name ='$name' where user_id='$adminid'");
+    //   if ($query) {
+    //   echo "<script>alert('Your profile has been updated.')</script>";
+    // }
+    // else
+    //   {
+    //     echo "<script>alert('Something Went Wrong. Please try again.')</script>";
+    //   }
+    // }
     ?>
 <?php include 'sidebar.php';?>
 
@@ -73,7 +73,7 @@ while ($row2=mysqli_fetch_array($ret2)) {
     $ranknum=$row2['rank'];
 }
 
-$ret3=mysqli_query($con,"SELECT * FROM ranks LIMIT ".$ranknum);
+$ret3=mysqli_query($con,"SELECT * FROM ranks WHERE rank_num='$ranknum'");
 while ($row3=mysqli_fetch_array($ret3)) {
     $rank=$row3['rank'];
 }

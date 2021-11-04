@@ -127,6 +127,7 @@ swal({
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                 <form action="Promotion.php" method="post" enctype="multipart/form-data">
+            <a href="proStatus.php" class="btn btn-success float-right">Check Status</a>
             <div class="name"><h3><b>Apply</b></h3></div>
             <hr>
             

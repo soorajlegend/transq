@@ -121,7 +121,7 @@ swal({
         $cnt=1;
         foreach ($results2 as $result2) {
          ?>  
-<option value="<?php echo htmlentities($result2->rank);?>"><?php echo htmlentities($result2->rank);?></option>
+<option value="<?php echo htmlentities($result2->rank_num);?>"><?php echo htmlentities($result2->rank);?></option>
  <?php }} ?>
                             <option selected disabled>Rank</option>
                         </select>

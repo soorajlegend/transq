@@ -35,7 +35,16 @@ swal({
     if (isset($_POST['add'])) {
         $rank = $_POST['rank'];
         $org_id = $_SESSION['user_id'];
-        $sql = "INSERT INTO ranks (org_id,rank) VALUES ('$org_id','$rank')";
+
+
+        $sql3="SELECT * FROM ranks WHERE org_id='$org_id' ";
+        $query3 = $dbh -> prepare($sql3);
+      $query3->execute();
+      $results3=$query3->fetchAll(PDO::FETCH_OBJ);
+      $count = $query3->rowCount();
+      $newCnt=$count+1;
+
+        $sql = "INSERT INTO ranks (org_id,rank, rank_num) VALUES ('$org_id','$rank','$newCnt')";
             if ($con->query($sql) === true) {
                 $lastid = $con->insert_id;
                 session_start();
